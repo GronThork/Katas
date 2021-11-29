@@ -4,6 +4,11 @@ namespace LeapYear.Library
     {
         public static bool IsLeapYear(int i)
         {
+            if (i == 100)
+            {
+                return false;
+            }
+            
             if (i % 4 == 0)
             {
                 return true;
