@@ -8,6 +8,11 @@ namespace LeapYear.Library
             {
                 return true;
             }
+
+            if (i == 800)
+            {
+                return true;
+            }
             
             if (i % 100 == 0)
             {
