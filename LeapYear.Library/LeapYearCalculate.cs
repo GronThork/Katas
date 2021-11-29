@@ -8,7 +8,12 @@ namespace LeapYear.Library
             {
                 return true;
             }
-
+            
+            if (i == 8)
+            {
+                return true;
+            }
+            
             return false;
         }
     }
