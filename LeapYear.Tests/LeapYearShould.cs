@@ -33,5 +33,12 @@ namespace LeapYear.Tests
             Assert.False(actual);
         }
 
+        [Fact]
+        public void ReturnFalseForYear200()
+        {
+            bool actual = LeapYearCalculate.IsLeapYear(200);
+            
+            Assert.False(actual);
+        }
     }
 }
