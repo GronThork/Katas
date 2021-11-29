@@ -6,26 +6,13 @@ namespace LeapYear.Tests
 {
     public class LeapYearShould
     {
-        [Fact]
-        public void ReturnTrueForYear4()
+        [Theory]
+        [InlineData(4)]
+        [InlineData(8)]
+        [InlineData(12)]
+        public void ReturnTrueIfTheInputIsMultipleOf4(int input)
         {
-            bool actual = LeapYearCalculate.IsLeapYear(4);
-            
-            Assert.True(actual);
-        }
-
-        [Fact]
-        public void ReturnTrueForYear8()
-        {
-            bool actual = LeapYearCalculate.IsLeapYear(8);
-            
-            Assert.True(actual);
-        }
-
-        [Fact]
-        public void ReturnTrueForYear12()
-        {
-            bool actual = LeapYearCalculate.IsLeapYear(12);
+            var actual = LeapYearCalculate.IsLeapYear(input);
             
             Assert.True(actual);
         }
