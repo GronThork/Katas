@@ -23,6 +23,14 @@ namespace LeapYear.Tests
         }
 
         [Fact]
+        public void ReturnTrueForYear12()
+        {
+            bool actual = LeapYearCalculate.IsLeapYear(12);
+            
+            Assert.True(actual);
+        }
+
+        [Fact]
         public void ReturnFalseForYear5()
         {
             bool actual = LeapYearCalculate.IsLeapYear(5);
