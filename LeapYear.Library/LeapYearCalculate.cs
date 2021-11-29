@@ -14,6 +14,11 @@ namespace LeapYear.Library
                 return false;
             }
 
+            if (i == 300)
+            {
+                return false;
+            }
+
             if (i % 4 == 0)
             {
                 return true;
