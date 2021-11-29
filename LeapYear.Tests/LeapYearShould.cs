@@ -17,37 +17,24 @@ namespace LeapYear.Tests
             Assert.True(actual);
         }
 
-        [Fact]
-        public void ReturnFalseForYear5()
+        [Theory]
+        [InlineData(5)]
+        [InlineData(100)]
+        [InlineData(200)]
+        [InlineData(300)]
+        public void ReturnFalseForInputMultipleOf100( int input)
         {
-            bool actual = LeapYearCalculate.IsLeapYear(5);
+            bool actual = LeapYearCalculate.IsLeapYear(input);
             
             Assert.False(actual);
         }
 
         [Fact]
-        public void ReturnFalseForYear100()
+        public void ReturnTrueForYear400()
         {
-            bool actual = LeapYearCalculate.IsLeapYear(100);
-            
-            Assert.False(actual);
-        }
+            bool actual = LeapYearCalculate.IsLeapYear(400);
 
-        [Fact]
-        public void ReturnFalseForYear200()
-        {
-            bool actual = LeapYearCalculate.IsLeapYear(200);
-            
-            Assert.False(actual);
+            Assert.True(actual);
         }
-        
-        [Fact]
-        public void ReturnFalseForYear300()
-        {
-            bool actual = LeapYearCalculate.IsLeapYear(300);
-            
-            Assert.False(actual);
-        }
-
     }
 }
