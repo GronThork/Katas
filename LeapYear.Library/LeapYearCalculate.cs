@@ -14,6 +14,11 @@ namespace LeapYear.Library
                 return true;
             }
             
+            if (i == 12)
+            {
+                return true;
+            }
+
             return false;
         }
     }
