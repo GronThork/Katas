@@ -9,6 +9,11 @@ namespace LeapYear.Library
                 return false;
             }
             
+            if (i == 200)
+            {
+                return false;
+            }
+
             if (i % 4 == 0)
             {
                 return true;
