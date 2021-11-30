@@ -8,7 +8,7 @@ namespace StringCalculator.Tests
         [Fact]
         public void Return2IfTheStringIs1And1()
         {
-            Assert.Equal(2,Calculate.Sum("1,1"));
+            Assert.Equal(2, Calculate.Sum("1,1"));
         }
     }
 }
