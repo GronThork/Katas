@@ -46,5 +46,12 @@ namespace StringCalculator.Tests
         {
             Assert.Equal(3, Calculate.Sum("2,1"));
         }
+        
+        [Fact]
+        public void Return4IfTheStringIs3And1()
+        {
+            Assert.Equal(4, Calculate.Sum("3,1"));
+        }
+
     }
 }
