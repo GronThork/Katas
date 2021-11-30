@@ -34,6 +34,7 @@ namespace StringCalculator.Tests
         {
             Assert.Equal(12, Calculate.Sum("1,11"));
         }
+        
 
     }
 }
