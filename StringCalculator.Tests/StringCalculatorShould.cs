@@ -35,6 +35,10 @@ namespace StringCalculator.Tests
             Assert.Equal(12, Calculate.Sum("1,11"));
         }
         
-
+        [Fact]
+        public void Return13IfTheStringIs1And12()
+        {
+            Assert.Equal(13, Calculate.Sum("1,12"));
+        }
     }
 }
