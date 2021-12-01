@@ -4,14 +4,16 @@ namespace TennisKata
 {
     public class ScoringSystem
     {
+        private string _actualScore = "love";
+        
         public string Score()
         {
-            return "love";
+            return _actualScore;
         }
 
         public void MarkAPoint()
         {
-            throw new System.NotImplementedException();
+            _actualScore = "15";
         }
     }
 }
