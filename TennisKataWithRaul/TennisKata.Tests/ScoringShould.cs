@@ -33,5 +33,17 @@ namespace TennisKata
             Assert.Equal("30", scoringSystem.Score());
         }
 
+        [Fact]
+        public void Show40WhenAPointIsMadeWhenTheScoreIs30()
+        {
+            ScoringSystem scoringSystem = new();
+
+            scoringSystem.MarkAPoint();
+            scoringSystem.MarkAPoint();
+            scoringSystem.MarkAPoint();
+
+            Assert.Equal("40", scoringSystem.Score());
+        }
+
     }
 }
