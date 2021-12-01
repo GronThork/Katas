@@ -42,5 +42,11 @@ namespace StringCalculator.Tests
             Assert.Equal(3,StringC.Add("1,2"));
         }
 
+        [Fact]
+        public void Return8WhenTheInputIs3And5()
+        {
+            Assert.Equal(8,StringC.Add("3,5"));
+        }
+
     }
 }
