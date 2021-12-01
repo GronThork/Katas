@@ -11,5 +11,16 @@ namespace TennisKata
             ScoringSystem scoringSystem = new();
             Assert.Equal("love", scoringSystem.Score());
         }
+        
+        [Fact]
+        public void Show15WhenAPointIsMade()
+        {
+            ScoringSystem scoringSystem = new();
+
+             scoringSystem.MarkAPoint();
+            
+            Assert.Equal("15", scoringSystem.Score());
+        }
+
     }
 }

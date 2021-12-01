@@ -8,5 +8,10 @@ namespace TennisKata
         {
             return "love";
         }
+
+        public void MarkAPoint()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
