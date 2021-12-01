@@ -9,13 +9,13 @@ namespace StringCalculator.Tests
         [Fact]
         public void Return0WhenTheInputIsEmpty()
         {
-            Assert.Equal(0,StringC.Sum(""));
+            Assert.Equal(0,StringC.Add(""));
         }
 
         [Fact]
         public void Return1WhenTheInputIs1()
         {
-            Assert.Equal(1,StringC.Sum("1"));
+            Assert.Equal(1,StringC.Add("1"));
         }
 
     }

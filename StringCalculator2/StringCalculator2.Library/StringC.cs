@@ -2,9 +2,9 @@ namespace StringCalculator2.Library
 {
     public static class StringC
     {
-        public static int Sum(string empty)
+        public static int Add(string numbers)
         {
-            if (empty == "1")
+            if (numbers == "1")
             {
                 return 1;
             }
