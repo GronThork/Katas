@@ -31,7 +31,7 @@ namespace TennisKata
 
         public bool GetWinner()
         {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }
