@@ -52,6 +52,13 @@ namespace TennisKata
             
             Assert.True(scoringSystem.GetWinner());
         }
-
+        
+        [Fact]
+        public void DontGetAWinnerWhenMakesAPointAtLove()
+        {
+            ScoringSystem scoringSystem = new();
+            
+            Assert.False(scoringSystem.GetWinner());
+        }
     }
 }
