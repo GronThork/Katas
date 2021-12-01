@@ -24,5 +24,11 @@ namespace StringCalculator.Tests
             Assert.Equal(2,StringC.Add("2"));
         }
 
+        [Fact]
+        public void Return3WhenTheInputIs3()
+        {
+            Assert.Equal(3,StringC.Add("3"));
+        }
+        
     }
 }
