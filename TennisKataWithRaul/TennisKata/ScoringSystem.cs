@@ -28,5 +28,10 @@ namespace TennisKata
                 _actualScore = "15";
             }
         }
+
+        public bool GetWinner()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
