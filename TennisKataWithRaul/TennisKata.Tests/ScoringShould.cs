@@ -50,6 +50,11 @@ namespace TennisKata
         {
             ScoringSystem scoringSystem = new();
             
+            scoringSystem.MarkAPoint();
+            scoringSystem.MarkAPoint();
+            scoringSystem.MarkAPoint();
+            scoringSystem.MarkAPoint();
+
             Assert.True(scoringSystem.GetWinner());
         }
         
@@ -60,5 +65,8 @@ namespace TennisKata
             
             Assert.False(scoringSystem.GetWinner());
         }
+        
+
+
     }
 }

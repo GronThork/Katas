@@ -31,6 +31,11 @@ namespace TennisKata
 
         public bool GetWinner()
         {
+            if (_actualScore == "love")
+            {
+                return false;
+            }
+            
             return true;
         }
     }
