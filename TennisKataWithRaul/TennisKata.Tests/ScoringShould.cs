@@ -9,7 +9,7 @@ namespace TennisKata
         public void StartAtLove()
         {
             ScoringSystem scoringSystem = new();
-            Assert.Equal("love",scoringSystem.Score());
+            Assert.Equal("love", scoringSystem.Score());
         }
     }
 }

@@ -4,9 +4,9 @@ namespace TennisKata
 {
     public class ScoringSystem
     {
-        public IEnumerable<char> Score()
+        public string Score()
         {
-            throw new System.NotImplementedException();
+            return "love";
         }
     }
 }
