@@ -35,7 +35,12 @@ namespace TennisKata
             {
                 return false;
             }
-            
+
+            if (_actualScore == "15")
+            {
+                return false;
+            }
+
             return true;
         }
     }
