@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator2.Library", "StringCalculator2\StringCalculator2.Library\StringCalculator2.Library.csproj", "{937C376D-8145-4996-9057-9D6E96D0072E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator2.Tests", "StringCalculator2\StringCalculator2.Tests\StringCalculator2.Tests.csproj", "{3446C2DB-8AA0-481F-A39A-64CA97661967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{937C376D-8145-4996-9057-9D6E96D0072E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937C376D-8145-4996-9057-9D6E96D0072E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937C376D-8145-4996-9057-9D6E96D0072E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937C376D-8145-4996-9057-9D6E96D0072E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3446C2DB-8AA0-481F-A39A-64CA97661967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3446C2DB-8AA0-481F-A39A-64CA97661967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3446C2DB-8AA0-481F-A39A-64CA97661967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3446C2DB-8AA0-481F-A39A-64CA97661967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
