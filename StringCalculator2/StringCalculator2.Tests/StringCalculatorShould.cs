@@ -11,5 +11,12 @@ namespace StringCalculator.Tests
         {
             Assert.Equal(0,StringC.Sum(""));
         }
+
+        [Fact]
+        public void Return1WhenTheInputIs1()
+        {
+            Assert.Equal(1,StringC.Sum("1"));
+        }
+
     }
 }
