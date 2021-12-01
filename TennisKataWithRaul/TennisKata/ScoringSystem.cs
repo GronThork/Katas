@@ -13,7 +13,15 @@ namespace TennisKata
 
         public void MarkAPoint()
         {
-            _actualScore = "15";
+            if (_actualScore == "15")
+            {
+                _actualScore = "30";
+            }
+            
+            if (_actualScore == "love")
+            {
+                _actualScore = "15";
+            }
         }
     }
 }
