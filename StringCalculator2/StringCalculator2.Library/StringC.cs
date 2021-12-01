@@ -6,21 +6,12 @@ namespace StringCalculator2.Library
     {
         public static int Add(string numbers)
         {
-            if (numbers == "1,1")
+            if (numbers.Contains(","))
             {
-                return 2;
+                return Convert.ToInt32(numbers.Split(",")[0]) +
+                       Convert.ToInt32(numbers.Split(",")[1]);
             }
-
-            if (numbers == "1,2")
-            {
-                return 3;
-            }
-
-            if (numbers == "3,5")
-            {
-                return 8;
-            }
-
+            
             if (numbers.Length == 1)
             {
                 return Convert.ToInt32(numbers.ToString());
