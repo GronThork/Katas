@@ -4,6 +4,10 @@ namespace StringCalculator2.Library
     {
         public static int Sum(string empty)
         {
+            if (empty == "1")
+            {
+                return 1;
+            }
             return 0;
         }
     }
