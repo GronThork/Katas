@@ -55,7 +55,7 @@ namespace TennisKata
             scoringSystem.MarkAPoint();
             scoringSystem.MarkAPoint();
 
-            Assert.True(scoringSystem.GetWinner());
+            Assert.True(scoringSystem.Winner);
         }
         
         [Fact]
@@ -63,7 +63,7 @@ namespace TennisKata
         {
             ScoringSystem scoringSystem = new();
             
-            Assert.False(scoringSystem.GetWinner());
+            Assert.False(scoringSystem.Winner);
         }
         
         [Fact]
@@ -73,7 +73,7 @@ namespace TennisKata
 
             scoringSystem.MarkAPoint();
 
-            Assert.False(scoringSystem.GetWinner());
+            Assert.False(scoringSystem.Winner);
         }
 
         [Fact]
@@ -84,7 +84,7 @@ namespace TennisKata
             scoringSystem.MarkAPoint();
             scoringSystem.MarkAPoint();
 
-            Assert.False(scoringSystem.GetWinner());
+            Assert.False(scoringSystem.Winner);
         }
 
         [Fact]
@@ -96,8 +96,7 @@ namespace TennisKata
             scoringSystem.MarkAPoint();
             scoringSystem.MarkAPoint();
 
-            Assert.False(scoringSystem.GetWinner());
+            Assert.False(scoringSystem.Winner);
         }
-
     }
 }

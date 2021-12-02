@@ -5,7 +5,7 @@ namespace TennisKata
     public class ScoringSystem
     {
         private string _actualScore = "love";
-        private bool _winner;
+        public bool Winner { get; private set; }
 
         public string Score()
         {
@@ -16,7 +16,7 @@ namespace TennisKata
         {
             if (_actualScore == "40")
             {
-                _winner = true;
+                Winner = true;
             }
 
             if (_actualScore == "30")
@@ -33,31 +33,6 @@ namespace TennisKata
             {
                 _actualScore = "15";
             }
-        }
-
-        public bool GetWinner()
-        {
-            if (_actualScore == "love")
-            {
-                return false;
-            }
-
-            if (_actualScore == "15")
-            {
-                return false;
-            }
-
-            if (_actualScore == "30")
-            {
-                return false;
-            }
-
-            if (_actualScore == "40")
-            {
-                return _winner;
-            }
-
-            return true;
         }
     }
 }
