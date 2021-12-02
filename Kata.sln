@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagramas.Tests", "Anagramas\Anagramas.Tests\Anagramas.Tests.csproj", "{77B1A851-CD76-4BDA-B63E-D014E1D2FD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagramas.Library", "Anagramas\Anagramas.Library\Anagramas.Library.csproj", "{1A2273C4-CBE4-43EB-8AEA-5FBE591A1E8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77B1A851-CD76-4BDA-B63E-D014E1D2FD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B1A851-CD76-4BDA-B63E-D014E1D2FD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B1A851-CD76-4BDA-B63E-D014E1D2FD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B1A851-CD76-4BDA-B63E-D014E1D2FD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2273C4-CBE4-43EB-8AEA-5FBE591A1E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2273C4-CBE4-43EB-8AEA-5FBE591A1E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2273C4-CBE4-43EB-8AEA-5FBE591A1E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2273C4-CBE4-43EB-8AEA-5FBE591A1E8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
