@@ -6,8 +6,9 @@ namespace Anagramas.Tests
     public class AnagramasShould
     {
         [Fact]
-        public void Test1()
+        public void ReturnAWithTheWordA()
         {
+            Assert.Equal("A",Anagrama.Do("A"));
         }
     }
 }
