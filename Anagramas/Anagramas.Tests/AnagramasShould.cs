@@ -12,5 +12,12 @@ namespace Anagramas.Tests
         {
             Assert.Equal(letter,Anagrama.Do(letter));
         }
+
+        [Fact]
+        public void ReturnTheAnagramaForTheWordAB()
+        {
+            Assert.Equal("AB-BA",Anagrama.Do("AB"));
+        }
+
     }
 }
