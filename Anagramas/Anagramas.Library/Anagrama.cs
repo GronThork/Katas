@@ -6,16 +6,11 @@ namespace Anagramas.Tests
     {
         public static string Do(string s)
         {
-            if (s == "AB")
+            if (s.Length == 2)
             {
-                return "BA";
+                return $"{s[1]}{s[0]}";
             }
-
-            if (s == "DG")
-            {
-                return "GD";
-            }
-
+            
             return s;
         }
     }

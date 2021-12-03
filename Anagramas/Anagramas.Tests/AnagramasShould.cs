@@ -24,6 +24,12 @@ namespace Anagramas.Tests
         {
             Assert.Equal("GD",Anagrama.Do("DG"));
         }
+        
+        [Fact]
+        public void ReturnTheAnagramaForTheWordABC()
+        {
+            Assert.Equal("ACB-BAC-BCA-CAB-CBA",Anagrama.Do("ABC"));
+        }
 
     }
 }
