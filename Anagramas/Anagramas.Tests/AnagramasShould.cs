@@ -5,10 +5,12 @@ namespace Anagramas.Tests
 {
     public class AnagramasShould
     {
-        [Fact]
-        public void ReturnAWithTheWordA()
+        [Theory]
+        [InlineData("A")]
+        [InlineData("B")]
+        public void ReturnTheSameCharacterThatUseAsInput(string letter)
         {
-            Assert.Equal("A",Anagrama.Do("A"));
+            Assert.Equal(letter,Anagrama.Do(letter));
         }
     }
 }
