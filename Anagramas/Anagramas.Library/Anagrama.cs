@@ -6,7 +6,7 @@ namespace Anagramas.Tests
     {
         public static IEnumerable<char> Do(string s)
         {
-            throw new System.NotImplementedException();
+            return "A";
         }
     }
 }
