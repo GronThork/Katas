@@ -16,13 +16,13 @@ namespace Anagramas.Tests
         [Fact]
         public void ReturnTheAnagramaForTheWordAB()
         {
-            Assert.Equal("AB-BA",Anagrama.Do("AB"));
+            Assert.Equal("BA",Anagrama.Do("AB"));
         }
 
         [Fact]
         public void ReturnTheAnagramaForTheWordDG()
         {
-            Assert.Equal("DG-GD",Anagrama.Do("DG"));
+            Assert.Equal("GD",Anagrama.Do("DG"));
         }
 
     }

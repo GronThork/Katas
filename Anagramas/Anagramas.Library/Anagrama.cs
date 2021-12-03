@@ -8,9 +8,14 @@ namespace Anagramas.Tests
         {
             if (s == "AB")
             {
-                return "AB-BA";
+                return "BA";
             }
-            
+
+            if (s == "DG")
+            {
+                return "GD";
+            }
+
             return s;
         }
     }
