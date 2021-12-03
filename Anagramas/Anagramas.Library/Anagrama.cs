@@ -4,9 +4,9 @@ namespace Anagramas.Tests
 {
     public class Anagrama
     {
-        public static IEnumerable<char> Do(string s)
+        public static string Do(string s)
         {
-            return "A";
+            return s;
         }
     }
 }
