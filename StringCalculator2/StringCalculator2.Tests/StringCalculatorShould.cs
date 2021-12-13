@@ -54,5 +54,11 @@ namespace StringCalculator.Tests
             Assert.Equal(26,StringC.Add("6,10,10"));
         }
 
+        [Fact]
+        public void SupportTheDelimiter_n()
+        {
+            Assert.Equal(15,StringC.Add("5,5\n5"));
+        }
+
     }
 }
