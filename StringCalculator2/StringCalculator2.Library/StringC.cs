@@ -7,9 +7,9 @@ namespace StringCalculator2.Library
     {
         public static int Add(string numbers)
         {
-            if (numbers.Contains(","))
+            if (new[] {",","\n"}.Any(numbers.Contains))
             {
-                return numbers.Split(",").Sum(Convert.ToInt32);
+                return numbers.Split(',', '\n').Sum(Convert.ToInt32);
             }
             
             if (numbers.Length == 1)
