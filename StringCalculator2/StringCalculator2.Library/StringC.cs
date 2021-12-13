@@ -7,17 +7,12 @@ namespace StringCalculator2.Library
     {
         public static int Add(string numbers)
         {
-            if (new[] {",","\n"}.Any(numbers.Contains))
+            return numbers.Length switch
             {
-                return numbers.Split(',', '\n').Sum(Convert.ToInt32);
-            }
-            
-            if (numbers.Length == 1)
-            {
-                return Convert.ToInt32(numbers);
-            }
-            
-            return 0;
+                0 => 0,
+                1 => Convert.ToInt32(numbers),
+                _ => numbers.Split(',', '\n').Sum(Convert.ToInt32)
+            };
         }
     }
 }
