@@ -21,5 +21,11 @@ namespace StringCalculator.Tests
         {
             Assert.Equal(expected,StringC.Add(input));
         }
+
+        [Fact]
+        public void Return15For5And10WithASpecificSemicolonDelimiter()
+        {
+            Assert.Equal(15,StringC.Add("\\;\n5;10"));
+        }
     }
 }
