@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using StringCalculator2.Library;
 using Xunit;
 
@@ -6,59 +7,19 @@ namespace StringCalculator.Tests
 {
     public class StringCalculatorShould
     {
-        [Fact]
-        public void Return0WhenTheInputIsEmpty()
+        [Theory]
+        [InlineData(0, "")]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(3, "3")]
+        [InlineData(2, "1,1")]
+        [InlineData(3, "1,2")]
+        [InlineData(8, "3,5")]
+        [InlineData(26, "6,10,10")]
+        [InlineData(15, "5,5\n5")]
+        public void ReturnTheSumForAInputString(int expected, string input)
         {
-            Assert.Equal(0,StringC.Add(""));
+            Assert.Equal(expected,StringC.Add(input));
         }
-
-        [Fact]
-        public void Return1WhenTheInputIs1()
-        {
-            Assert.Equal(1,StringC.Add("1"));
-        }
-
-        [Fact]
-        public void Return2WhenTheInputIs2()
-        {
-            Assert.Equal(2,StringC.Add("2"));
-        }
-
-        [Fact]
-        public void Return3WhenTheInputIs3()
-        {
-            Assert.Equal(3,StringC.Add("3"));
-        }
-
-        [Fact]
-        public void Return2WhenTheInputIs1And1()
-        {
-            Assert.Equal(2,StringC.Add("1,1"));
-        }
-
-        [Fact]
-        public void Return3WhenTheInputIs1And2()
-        {
-            Assert.Equal(3,StringC.Add("1,2"));
-        }
-
-        [Fact]
-        public void Return8WhenTheInputIs3And5()
-        {
-            Assert.Equal(8,StringC.Add("3,5"));
-        }
-
-        [Fact]
-        public void Return26WhenTheInputIs6And10And10()
-        {
-            Assert.Equal(26,StringC.Add("6,10,10"));
-        }
-
-        [Fact]
-        public void SupportTheDelimiter_n()
-        {
-            Assert.Equal(15,StringC.Add("5,5\n5"));
-        }
-
     }
 }
