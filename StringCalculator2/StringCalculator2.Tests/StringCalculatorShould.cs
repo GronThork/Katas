@@ -51,7 +51,7 @@ namespace StringCalculator.Tests
         [Fact]
         public void Return26WhenTheInputIs6And10And10()
         {
-            Assert.Equal(26,StringC.Add("10,10"));
+            Assert.Equal(26,StringC.Add("6,10,10"));
         }
 
     }
