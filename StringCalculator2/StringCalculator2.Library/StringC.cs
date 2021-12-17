@@ -9,12 +9,21 @@ namespace StringCalculator2.Library
         public static int Add(string numbers)
         {
             char[] delimiters;
-            
+
             if (numbers.StartsWith("\\"))
             {
                 delimiters = new char[] {Convert.ToChar(numbers.Substring(1, 1))};
 
-                numbers = numbers.Substring(numbers.LastIndexOf('\n')+1);
+                if (delimiters.First() == '\n')
+                {
+                    numbers = numbers.Substring(numbers.LastIndexOf("\n\n") +2);
+                }
+                else
+                {
+                    numbers = numbers.Substring(numbers.LastIndexOf('\n') + 1);
+                }
+                
+                
             }
             else
             {
