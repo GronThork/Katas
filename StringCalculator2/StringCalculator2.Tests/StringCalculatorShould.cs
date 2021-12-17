@@ -30,5 +30,11 @@ namespace StringCalculator.Tests
         {
             Assert.Equal(expected,StringC.Add(input));
         }
+
+        [Fact]
+        public void ThrowAExceptionForNumberNegativeTen()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => StringC.Add("-10"));
+        }
     }
 }
