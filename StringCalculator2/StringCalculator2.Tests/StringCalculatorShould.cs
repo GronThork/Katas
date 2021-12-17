@@ -22,10 +22,13 @@ namespace StringCalculator.Tests
             Assert.Equal(expected,StringC.Add(input));
         }
 
-        [Fact]
-        public void Return15For5And10WithASpecificSemicolonDelimiter()
+        [Theory]
+        [InlineData("\\;\n5;10", 15)]
+        [InlineData("\\-\n10-5-7",22)]
+        [InlineData("\\\n\n10\n5\n5",20)]
+        public void ReturnTheCorrectSumForASpecificSemicolonDelimiter(string input, int expected)
         {
-            Assert.Equal(15,StringC.Add("\\;\n5;10"));
+            Assert.Equal(expected,StringC.Add(input));
         }
     }
 }
