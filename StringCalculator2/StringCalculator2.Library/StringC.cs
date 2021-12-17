@@ -12,22 +12,15 @@ namespace StringCalculator2.Library
 
             if (numbers.StartsWith("\\"))
             {
-                delimiters = new char[] {Convert.ToChar(numbers.Substring(1, 1))};
+                delimiters = new[] {Convert.ToChar(numbers.Substring(1, 1))};
 
-                if (delimiters.First() == '\n')
-                {
-                    numbers = numbers.Substring(numbers.LastIndexOf("\n\n") +2);
-                }
-                else
-                {
-                    numbers = numbers.Substring(numbers.LastIndexOf('\n') + 1);
-                }
-                
-                
+                numbers = delimiters.First() == '\n' ? 
+                    numbers.Substring(numbers.LastIndexOf("\n\n") + 2) : 
+                    numbers.Substring(numbers.LastIndexOf('\n') + 1);
             }
             else
             {
-                delimiters = new char[] {',', '\n'};
+                delimiters = new[] {',', '\n'};
             }
             
             return numbers.Length switch
