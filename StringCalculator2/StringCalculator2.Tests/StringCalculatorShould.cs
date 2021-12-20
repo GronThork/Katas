@@ -34,7 +34,7 @@ namespace StringCalculator.Tests
         [Fact]
         public void ThrowAExceptionForNumberNegativeTen()
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => StringC.Add("-10"));
+            Assert.Throws<IndexOutOfRangeException>(() => StringC.Add("-10"));
         }
     }
 }

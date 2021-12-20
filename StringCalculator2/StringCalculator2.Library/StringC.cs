@@ -27,8 +27,29 @@ namespace StringCalculator2.Library
             {
                 0 => 0,
                 1 => Convert.ToInt32(numbers),
-                _ => numbers.Split(delimiters).Sum(Convert.ToInt32)
+                _ => CheckForNegativeNumbers(numbers, delimiters).Sum(Convert.ToInt32)
             };
+        }
+
+        private static string[] CheckForNegativeNumbers(string numbers, char[] delimiters)
+        {
+            var numbersToSum = numbers.Split(delimiters);
+            string negativeNumbers = null;
+            
+            foreach (var number in numbersToSum)
+            {
+                if (Convert.ToInt32(number) < 0)
+                {
+                    negativeNumbers += number;
+                }
+            }
+
+            if (negativeNumbers != null)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            return numbersToSum;
         }
     }
 }
