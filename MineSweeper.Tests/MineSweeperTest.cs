@@ -39,7 +39,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n....\n....\n....";
             var board = new Board(input);
             
-            board.MineNeigBoursIn(new Point(1, 1)).Should().Be(1);
+            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(1);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n..*.\n....\n....";
             var board = new Board(input);
             
-            board.MineNeigBoursIn(new Point(1, 1)).Should().Be(2);
+            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(2);
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n*.*.\n....\n....";
             var board = new Board(input);
             
-            board.MineNeigBoursIn(new Point(1, 1)).Should().Be(3);
+            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(3);
         }
 
     }

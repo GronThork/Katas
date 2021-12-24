@@ -29,17 +29,15 @@ namespace MineSweeper
             return _field[point.X,point.Y] == '*';
         }
 
-        public int MineNeigBoursIn(Point point)
+        public int NeigBoursMineIn(Point point)
         {
             var countMines = 0;
-            
-            if (MineIn(new Point(0, 1)))
-                countMines++;
-            if (MineIn(new Point(1, 0)))
-                countMines++;
-            if (MineIn(new Point(1, 2)))
-                countMines++;
 
+            for (var x = point.X-1; x <= point.X+1; x++)
+            for (var y = point.Y-1; y <= point.Y+1; y++)
+                if (MineIn(new Point(x, y)))
+                    countMines++;
+            
             return countMines;
         }
     }
