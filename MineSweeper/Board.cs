@@ -31,7 +31,7 @@ namespace MineSweeper
 
         public int MineNeigBoursIn(Point point)
         {
-            throw new System.NotImplementedException();
+            return 1;
         }
     }
 }
