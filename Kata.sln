@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.Tests", "MineSweeper.Tests\MineSweeper.Tests.csproj", "{B1A7E3B9-26A3-4B0A-8083-47231E83867A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "MineSweeper\MineSweeper.csproj", "{61AFAF96-8273-416E-A603-22EE8D62F66C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1A7E3B9-26A3-4B0A-8083-47231E83867A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A7E3B9-26A3-4B0A-8083-47231E83867A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A7E3B9-26A3-4B0A-8083-47231E83867A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A7E3B9-26A3-4B0A-8083-47231E83867A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61AFAF96-8273-416E-A603-22EE8D62F66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61AFAF96-8273-416E-A603-22EE8D62F66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61AFAF96-8273-416E-A603-22EE8D62F66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61AFAF96-8273-416E-A603-22EE8D62F66C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
