@@ -60,5 +60,14 @@ namespace MineSweeper.Tests
             board.NeigBoursMineIn(new Point(1, 1)).Should().Be(3);
         }
 
+        [Fact]
+        public void TwoNeighbourMinesIn0_0()
+        {
+            var input = "4 4\n.*..\n*.*.\n....\n....";
+            var board = new Board(input);
+            
+            board.NeigBoursMineIn(new Point(0, 0)).Should().Be(2);
+        }
+
     }
 }
