@@ -28,5 +28,10 @@ namespace MineSweeper
         {
             return _field[point.X,point.Y] == '*';
         }
+
+        public int MineNeigBoursIn(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
