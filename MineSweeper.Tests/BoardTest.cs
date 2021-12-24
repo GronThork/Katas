@@ -39,7 +39,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n....\n....\n....";
             var board = new Board(input);
             
-            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(1);
+            board.NeighboursMineIn(new Point(1, 1)).Should().Be(1);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n..*.\n....\n....";
             var board = new Board(input);
             
-            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(2);
+            board.NeighboursMineIn(new Point(1, 1)).Should().Be(2);
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n*.*.\n....\n....";
             var board = new Board(input);
             
-            board.NeigBoursMineIn(new Point(1, 1)).Should().Be(3);
+            board.NeighboursMineIn(new Point(1, 1)).Should().Be(3);
         }
 
         [Fact]
@@ -66,7 +66,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n*.*.\n....\n....";
             var board = new Board(input);
             
-            board.NeigBoursMineIn(new Point(0, 0)).Should().Be(2);
+            board.NeighboursMineIn(new Point(0, 0)).Should().Be(2);
         }
 
         [Fact]
@@ -75,7 +75,25 @@ namespace MineSweeper.Tests
             var input = "4 4\n.*..\n*.*.\n....\n.**.";
             var board = new Board(input);
             
-            board.NeigBoursMineIn(new Point(3, 3)).Should().Be(1);
+            board.NeighboursMineIn(new Point(3, 3)).Should().Be(1);
+        }
+        
+        [Fact]
+        public void CheckBottomLeftCornerIndex()
+        {
+            var input = "4 4\n.*..\n*.*.\n....\n.**.";
+            var board = new Board(input);
+            
+            board.NeighboursMineIn(new Point(3, 0)).Should().Be(1);
+        }
+        
+        [Fact]
+        public void CheckTopRightCornerIndex()
+        {
+            var input = "4 4\n.*..\n*.*.\n....\n.**.";
+            var board = new Board(input);
+            
+            board.NeighboursMineIn(new Point(0, 3)).Should().Be(1);
         }
 
         [Fact]
@@ -87,6 +105,5 @@ namespace MineSweeper.Tests
             
             board.PrintField().Should().Be(expected);
         }
-
     }
 }
