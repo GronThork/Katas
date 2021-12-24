@@ -9,7 +9,7 @@ namespace MineSweeper
             _board = new Board(input);
         }
 
-        public string Fields()
+        public string PrintFields()
         {
             return "Field #1:\n" + _board.PrintField();
         }
