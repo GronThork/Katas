@@ -42,5 +42,14 @@ namespace MineSweeper.Tests
             board.MineNeigBoursIn(new Point(0, 0)).Should().Be(1);
         }
 
+        [Fact]
+        public void TwoNeighbourMinesIn0_0()
+        {
+            var input = "4 4\n.*..\n*.*.\n.*..\n....";
+            var board = new Board(input);
+            
+            board.MineNeigBoursIn(new Point(0, 0)).Should().Be(2);
+        }
+
     }
 }
