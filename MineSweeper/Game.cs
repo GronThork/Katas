@@ -2,14 +2,16 @@ namespace MineSweeper
 {
     public class Game
     {
+        private readonly Board _board;
+
         public Game(string input)
         {
-            throw new System.NotImplementedException();
+            _board = new Board(input);
         }
 
         public string Fields()
         {
-            throw new System.NotImplementedException();
+            return "Field #1:\n" + _board.PrintField();
         }
     }
 }
