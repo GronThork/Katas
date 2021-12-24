@@ -61,7 +61,7 @@ namespace MineSweeper.Tests
         }
 
         [Fact]
-        public void TwoNeighbourMinesIn0_0()
+        public void CheckTopLeftCornerIndex()
         {
             var input = "4 4\n.*..\n*.*.\n....\n....";
             var board = new Board(input);

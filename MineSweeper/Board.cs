@@ -26,6 +26,11 @@ namespace MineSweeper
 
         public bool MineIn(Point point)
         {
+            if (point.X < 0 || point.Y < 0)
+            {
+                return false;
+            }
+            
             return _field[point.X,point.Y] == '*';
         }
 
