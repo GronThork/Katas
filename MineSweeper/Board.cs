@@ -31,7 +31,14 @@ namespace MineSweeper
 
         public int MineNeigBoursIn(Point point)
         {
-            return 1;
+            var countMines = 0;
+            
+            if (MineIn(new Point(1, 0)))
+                countMines++;
+            if (MineIn(new Point(0, 1)))
+                countMines++;
+            
+            return countMines;
         }
     }
 }
