@@ -34,21 +34,21 @@ namespace MineSweeper.Tests
         }
 
         [Fact]
-        public void OneNeighbourMineIn0_0()
+        public void OneNeighbourMineIn1_1()
         {
-            var input = "4 4\n.*..\n..*.\n.*..\n....";
+            var input = "4 4\n.*..\n....\n....\n....";
             var board = new Board(input);
             
-            board.MineNeigBoursIn(new Point(0, 0)).Should().Be(1);
+            board.MineNeigBoursIn(new Point(1, 1)).Should().Be(1);
         }
 
         [Fact]
-        public void TwoNeighbourMinesIn0_0()
+        public void TwoNeighbourMinesIn1_1()
         {
-            var input = "4 4\n.*..\n*.*.\n.*..\n....";
+            var input = "4 4\n.*..\n..*.\n....\n....";
             var board = new Board(input);
             
-            board.MineNeigBoursIn(new Point(0, 0)).Should().Be(2);
+            board.MineNeigBoursIn(new Point(1, 1)).Should().Be(2);
         }
 
         [Fact]
