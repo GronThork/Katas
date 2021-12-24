@@ -45,5 +45,10 @@ namespace MineSweeper
             
             return countMines;
         }
+
+        public string PrintField()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -4,7 +4,7 @@ using Xunit;
 
 namespace MineSweeper.Tests
 {
-    public class MineSweeperTest
+    public class BoardTest
     {
         [Fact]
         public void CheckAMineIn0_0()
@@ -76,6 +76,16 @@ namespace MineSweeper.Tests
             var board = new Board(input);
             
             board.NeigBoursMineIn(new Point(3, 3)).Should().Be(1);
+        }
+
+        [Fact]
+        public void ReturnTheFieldWithTheNumberOfNeighbours()
+        {
+            var input = "4 4\n.*..\n*.*.\n..*.\n.*..";
+            var expected = "2*21\n*4*2\n24*2\n1*21";
+            var board = new Board(input);
+            
+            board.PrintField().Should().Be(expected);
         }
 
     }
