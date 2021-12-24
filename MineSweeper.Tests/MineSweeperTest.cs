@@ -69,5 +69,14 @@ namespace MineSweeper.Tests
             board.NeigBoursMineIn(new Point(0, 0)).Should().Be(2);
         }
 
+        [Fact]
+        public void CheckBottomRightCornerIndex()
+        {
+            var input = "4 4\n.*..\n*.*.\n....\n.**.";
+            var board = new Board(input);
+            
+            board.NeigBoursMineIn(new Point(3, 3)).Should().Be(1);
+        }
+
     }
 }
