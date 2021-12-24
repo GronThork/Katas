@@ -12,7 +12,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n*...\n....\n.*..\n....";
             var board = new Board(input);
             
-            board.MineIn(0, 0).Should().Be(true);
+            board.MineIn(new Point(0, 0)).Should().Be(true);
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace MineSweeper.Tests
             var input = "4 4\n....\n....\n.*..\n....";
             var board = new Board(input);
             
-            board.MineIn(0, 0).Should().Be(false);
+            board.MineIn(new Point(0, 0)).Should().Be(false);
         }
 
     }

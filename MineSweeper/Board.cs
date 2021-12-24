@@ -9,7 +9,7 @@ namespace MineSweeper
             _field = input[4];
         }
 
-        public bool MineIn(int p0, int p1)
+        public bool MineIn(Point point)
         {
             return _field == '*';
         }
