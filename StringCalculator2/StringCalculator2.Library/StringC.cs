@@ -46,7 +46,7 @@ namespace StringCalculator2.Library
 
             if (negativeNumbers != null)
             {
-                throw new IndexOutOfRangeException();
+                throw new Exception("negatives not allowed");
             }
 
             return numbersToSum;

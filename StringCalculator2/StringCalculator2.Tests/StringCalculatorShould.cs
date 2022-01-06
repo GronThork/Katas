@@ -31,10 +31,14 @@ namespace StringCalculator.Tests
             Assert.Equal(expected,StringC.Add(input));
         }
 
-        [Fact]
-        public void ThrowAExceptionForNumberNegativeTen()
+        [Theory]
+        [InlineData("-10")]
+        [InlineData("-999")]
+        [InlineData("-1")]
+        public void ThrowAExceptionForANegativeNumber(string input)
         {
-            Assert.Throws<IndexOutOfRangeException>(() => StringC.Add("-10"));
+            var exception = Assert.Throws<Exception>(() => StringC.Add(input));
+            Assert.Equal("negatives not allowed", exception.Message);
         }
     }
 }
