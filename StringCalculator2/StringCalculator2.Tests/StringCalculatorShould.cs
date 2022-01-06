@@ -40,5 +40,11 @@ namespace StringCalculator.Tests
             var exception = Assert.Throws<Exception>(() => StringC.Add(input));
             Assert.Equal("negatives not allowed", exception.Message);
         }
+
+        [Fact]
+        public void ExcludeNumbersAbove999()
+        {
+            Assert.Equal(2,StringC.Add("1001,2"));
+        }
     }
 }
