@@ -22,27 +22,19 @@ namespace StringCalculator2.Library
             {
                 delimiters = new[] {',', '\n'};
             }
-            
+
             return numbers.Length switch
             {
                 0 => 0,
                 1 => Convert.ToInt32(numbers),
-                _ => CheckForNegativeNumbers(numbers, delimiters).Sum(Convert.ToInt32)
+                _ => CheckForNegativeNumbers(numbers, delimiters).Select(int.Parse).ToArray().Where(x => x < 1000).Sum()
             };
         }
 
         private static string[] CheckForNegativeNumbers(string numbers, char[] delimiters)
         {
             var numbersToSum = numbers.Split(delimiters);
-            string negativeNumbers = null;
-            
-            foreach (var number in numbersToSum)
-            {
-                if (Convert.ToInt32(number) < 0)
-                {
-                    negativeNumbers += number;
-                }
-            }
+            var negativeNumbers = numbersToSum.Where(number => Convert.ToInt32(number) < 0).Aggregate<string, string>(null, (current, number) => current + number);
 
             if (negativeNumbers != null)
             {
