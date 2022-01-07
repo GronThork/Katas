@@ -58,14 +58,6 @@ namespace StringCalculator.Tests
             
             Assert.Equal(expected,stringC.Add(input));
         }
-
-        [Fact]
-        public void DetectAPairOfBracketsInTheString()
-        {
-            var stringC = new StringC();
-            
-            Assert.Equal((2,5),stringC.IndexPairOfBrackets("\\[***]\n50***4***1"));
-        }
         
         [Fact]
         public void HaveASeparatorInsideBrackets()

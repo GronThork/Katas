@@ -29,12 +29,9 @@ namespace StringCalculator2.Library
         {
             if (_numbers.StartsWith("\\"))
             {
-                var (startIndex, endIndex) = IndexPairOfBrackets(_numbers);
-                if (startIndex > 0 && endIndex > 0)
-                {
-                    _delimiters.Add(_numbers.Substring(startIndex, endIndex - startIndex));
-                }
-                else
+                BracketDelimiters(_numbers);
+                
+                if(_delimiters.Count == 0)
                 {
                     _delimiters.Add(Convert.ToString(_numbers.Substring(1, 1)));
                 }
@@ -63,11 +60,14 @@ namespace StringCalculator2.Library
             return numbersToSum;
         }
 
-        public (int,int) IndexPairOfBrackets(string stringInput)
+        private void BracketDelimiters(string stringInput)
         {
-            var startIndex = stringInput.IndexOf('[') + 1;
-            var endIndex = stringInput.IndexOf(']');
-            return (startIndex,endIndex);
+            var stringSplited = stringInput.Split('[', ']');
+
+            for (int i = 1; i < stringSplited.Length-1; i++)
+            {
+                _delimiters.Add(stringSplited[i]);
+            }
         }
     }
 }
