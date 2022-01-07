@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using StringCalculator2.Library;
 using Xunit;
+using Xunit.Sdk;
 
 namespace StringCalculator.Tests
 {
@@ -41,10 +42,19 @@ namespace StringCalculator.Tests
             Assert.Equal("negatives not allowed", exception.Message);
         }
 
-        [Fact]
-        public void ExcludeNumbersAbove999()
+        [Theory]
+        [InlineData(2,"1001,2")]
+        [InlineData(13,"1001,13")]
+        [InlineData(23,"1000,23")]
+        public void ExcludeNumbersAbove999(int expected, string input)
         {
-            Assert.Equal(2,StringC.Add("1001,2"));
+            Assert.Equal(expected,StringC.Add(input));
+        }
+
+        [Fact]
+        public void HaveASeparatorInsideBrackets()
+        {
+            Assert.Equal(55,StringC.Add("//[***]\n50***4***1"));
         }
     }
 }
