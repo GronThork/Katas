@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace StringCalculator2.Library
 {
@@ -46,7 +47,9 @@ namespace StringCalculator2.Library
 
         public static bool ThereAreBrackets(string stringInput)
         {
-            throw new NotImplementedException();
+            var startIndex = stringInput.IndexOf('[');
+            var endIndex = stringInput.IndexOf(']');
+            return startIndex > 0 && endIndex > 0;
         }
     }
 }
