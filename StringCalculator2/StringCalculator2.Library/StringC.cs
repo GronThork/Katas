@@ -14,15 +14,8 @@ namespace StringCalculator2.Library
         {
             _numbers = numbers;
             
-            if (_numbers.StartsWith("\\"))
-            {
-                DelimitersCalculator();
-            }
-            else
-            {
-                _delimiters = new[] {",", "\n"};
-            }
-
+            DelimitersCalculator();
+            
             return _numbers.Length switch
             {
                 0 => 0,
@@ -33,19 +26,26 @@ namespace StringCalculator2.Library
 
         private void DelimitersCalculator()
         {
-            var (startIndex, endIndex) = IndexPairOfBrackets(_numbers);
-            if (startIndex > 0 && endIndex > 0)
+            if (_numbers.StartsWith("\\"))
             {
-                _delimiters = new[] {_numbers.Substring(startIndex, endIndex - startIndex)};
+                var (startIndex, endIndex) = IndexPairOfBrackets(_numbers);
+                if (startIndex > 0 && endIndex > 0)
+                {
+                    _delimiters = new[] {_numbers.Substring(startIndex, endIndex - startIndex)};
+                }
+                else
+                {
+                    _delimiters = new[] {Convert.ToString(_numbers.Substring(1, 1))};
+                }
+
+                _numbers = _delimiters.First() == "\n"
+                    ? _numbers.Substring(_numbers.LastIndexOf("\n\n", StringComparison.Ordinal) + 2)
+                    : _numbers.Substring(_numbers.LastIndexOf('\n') + 1);
             }
             else
             {
-                _delimiters = new[] {Convert.ToString(_numbers.Substring(1, 1))};
+                _delimiters = new[] {",", "\n"};
             }
-
-            _numbers = _delimiters.First() == "\n"
-                ? _numbers.Substring(_numbers.LastIndexOf("\n\n", StringComparison.Ordinal) + 2)
-                : _numbers.Substring(_numbers.LastIndexOf('\n') + 1);
         }
 
         private string[] CheckForNegativeNumbers(string numbers, string[] delimiters)
