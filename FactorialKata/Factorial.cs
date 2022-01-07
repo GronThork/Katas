@@ -4,7 +4,7 @@ namespace FactorialKata
     {
         public int Calculate(int input)
         {
-            throw new System.NotImplementedException();
+            return 1;
         }
     }
 }
