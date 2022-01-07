@@ -4,6 +4,10 @@ namespace FactorialKata
     {
         public int Calculate(int input)
         {
+            if (input == 4)
+            {
+                return 4 * Calculate(input-1);
+            }
             if (input == 3)
             {
                 return 3 * Calculate(input-1);
