@@ -6,11 +6,11 @@ namespace FactorialKata
         {
             if (input == 3)
             {
-                return 3 * 2;
+                return 3 * Calculate(input-1);
             }
             if (input == 2)
             {
-                return 2 * 1;
+                return 2 * Calculate(input-1);
             }
             
             return 1;
