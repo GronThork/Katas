@@ -54,13 +54,14 @@ namespace StringCalculator.Tests
         [Fact]
         public void DetectAPairOfBracketsInTheString()
         {
-            Assert.True(StringC.ThereAreBrackets("//[***]\n50***4***1"));
-            Assert.False(StringC.ThereAreBrackets("//[***\n50***4***1"));
+            Assert.True(StringC.PairOfBrackets("\\[***]\n50***4***1"));
+            Assert.False(StringC.PairOfBrackets("\\[***\n50***4***1"));
         }
+        
         [Fact]
         public void HaveASeparatorInsideBrackets()
         {
-            Assert.Equal(55,StringC.Add("//[***]\n50***4***1"));
+            Assert.Equal(55,StringC.Add("\\[***]\n50***4***1"));
         }
     }
 }

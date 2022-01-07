@@ -9,19 +9,28 @@ namespace StringCalculator2.Library
     {
         public static int Add(string numbers)
         {
-            char[] delimiters;
+            string[] delimiters;
 
             if (numbers.StartsWith("\\"))
             {
-                delimiters = new[] {Convert.ToChar(numbers.Substring(1, 1))};
+                if (PairOfBrackets(numbers))
+                {
+                    var startIndex = numbers.IndexOf('[') + 1;
+                    var endIndex = numbers.IndexOf(']', startIndex);
+                    delimiters = new[] {numbers.Substring(startIndex, endIndex - startIndex)};
+                }
+                else
+                {
+                    delimiters = new[] {Convert.ToString(numbers.Substring(1, 1))};
+                }
 
-                numbers = delimiters.First() == '\n' ? 
-                    numbers.Substring(numbers.LastIndexOf("\n\n") + 2) : 
+                numbers = delimiters.First() == "\n" ? 
+                    numbers.Substring(numbers.LastIndexOf("\n\n", StringComparison.Ordinal) + 2) : 
                     numbers.Substring(numbers.LastIndexOf('\n') + 1);
             }
             else
             {
-                delimiters = new[] {',', '\n'};
+                delimiters = new[] {",", "\n"};
             }
 
             return numbers.Length switch
@@ -32,9 +41,9 @@ namespace StringCalculator2.Library
             };
         }
 
-        private static string[] CheckForNegativeNumbers(string numbers, char[] delimiters)
+        private static string[] CheckForNegativeNumbers(string numbers, string[] delimiters)
         {
-            var numbersToSum = numbers.Split(delimiters);
+            var numbersToSum = numbers.Split(delimiters,StringSplitOptions.None);
             var negativeNumbers = numbersToSum.Where(number => Convert.ToInt32(number) < 0).Aggregate<string, string>(null, (current, number) => current + number);
 
             if (negativeNumbers != null)
@@ -45,7 +54,7 @@ namespace StringCalculator2.Library
             return numbersToSum;
         }
 
-        public static bool ThereAreBrackets(string stringInput)
+        public static bool PairOfBrackets(string stringInput)
         {
             var startIndex = stringInput.IndexOf('[');
             var endIndex = stringInput.IndexOf(']');
