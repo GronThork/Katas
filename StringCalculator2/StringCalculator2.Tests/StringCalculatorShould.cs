@@ -20,7 +20,9 @@ namespace StringCalculator.Tests
         [InlineData(15, "5,5\n5")]
         public void ReturnTheSumForAInputString(int expected, string input)
         {
-            Assert.Equal(expected,StringC.Add(input));
+            var stringC = new StringC();
+            
+            Assert.Equal(expected,stringC.Add(input));
         }
 
         [Theory]
@@ -29,7 +31,9 @@ namespace StringCalculator.Tests
         [InlineData("\\\n\n10\n5\n5",20)]
         public void ReturnTheCorrectSumForASpecificSemicolonDelimiter(string input, int expected)
         {
-            Assert.Equal(expected,StringC.Add(input));
+            var stringC = new StringC();
+            
+            Assert.Equal(expected,stringC.Add(input));
         }
 
         [Theory]
@@ -38,7 +42,9 @@ namespace StringCalculator.Tests
         [InlineData("-1")]
         public void ThrowAExceptionForANegativeNumber(string input)
         {
-            var exception = Assert.Throws<Exception>(() => StringC.Add(input));
+            var stringC = new StringC();
+            
+            var exception = Assert.Throws<Exception>(() => stringC.Add(input));
             Assert.Equal("negatives not allowed", exception.Message);
         }
 
@@ -48,20 +54,25 @@ namespace StringCalculator.Tests
         [InlineData(23,"1000,23")]
         public void ExcludeNumbersAbove999(int expected, string input)
         {
-            Assert.Equal(expected,StringC.Add(input));
+            var stringC = new StringC();
+            
+            Assert.Equal(expected,stringC.Add(input));
         }
 
         [Fact]
         public void DetectAPairOfBracketsInTheString()
         {
-            Assert.True(StringC.PairOfBrackets("\\[***]\n50***4***1"));
-            Assert.False(StringC.PairOfBrackets("\\[***\n50***4***1"));
+            var stringC = new StringC();
+            
+            Assert.Equal((2,5),stringC.IndexPairOfBrackets("\\[***]\n50***4***1"));
         }
         
         [Fact]
         public void HaveASeparatorInsideBrackets()
         {
-            Assert.Equal(55,StringC.Add("\\[***]\n50***4***1"));
+            var stringC = new StringC();
+            
+            Assert.Equal(55,stringC.Add("\\[***]\n50***4***1"));
         }
     }
 }
