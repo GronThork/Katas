@@ -58,21 +58,16 @@ namespace StringCalculator.Tests
             
             Assert.Equal(expected,stringC.Add(input));
         }
-        
-        [Fact]
-        public void HaveASeparatorInsideBrackets()
+
+        [Theory]
+        [InlineData(55,"\\[***]\n50***4***1")]
+        [InlineData(42,"\\[***][...]\n37***4...1")]
+        [InlineData(120,"\\[***][...][pepe]\n90***4...1pepe25")]
+        public void HaveSeparatorsInsideBrackets(int expected, string inputString)
         {
             var stringC = new StringC();
             
-            Assert.Equal(55,stringC.Add("\\[***]\n50***4***1"));
-        }
-        
-        [Fact]
-        public void HaveSeveralSeparatorsInsideBrackets()
-        {
-            var stringC = new StringC();
-            
-            Assert.Equal(55,stringC.Add("\\[***][...]\n50***4...1"));
+            Assert.Equal(expected,stringC.Add(inputString));
         }
     }
 }
