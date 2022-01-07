@@ -13,5 +13,14 @@ namespace FactorialKata.Tests
 
             factorial.Calculate(0).Should().Be(1);
         }
+        
+        [Fact]
+        public void Return1forInput1()
+        {
+            var factorial = new Factorial();
+
+            factorial.Calculate(1).Should().Be(1);
+        }
+
     }
 }
