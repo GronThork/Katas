@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -8,7 +9,7 @@ namespace StringCalculator2.Library
     public class StringC
     {
         private string _numbers;
-        private string[] _delimiters;
+        private readonly List<string> _delimiters = new();
         
         public int Add(string numbers)
         {
@@ -31,11 +32,11 @@ namespace StringCalculator2.Library
                 var (startIndex, endIndex) = IndexPairOfBrackets(_numbers);
                 if (startIndex > 0 && endIndex > 0)
                 {
-                    _delimiters = new[] {_numbers.Substring(startIndex, endIndex - startIndex)};
+                    _delimiters.Add(_numbers.Substring(startIndex, endIndex - startIndex));
                 }
                 else
                 {
-                    _delimiters = new[] {Convert.ToString(_numbers.Substring(1, 1))};
+                    _delimiters.Add(Convert.ToString(_numbers.Substring(1, 1)));
                 }
 
                 _numbers = _delimiters.First() == "\n"
@@ -44,13 +45,14 @@ namespace StringCalculator2.Library
             }
             else
             {
-                _delimiters = new[] {",", "\n"};
+                _delimiters.Add(",");
+                _delimiters.Add("\n");
             }
         }
 
-        private string[] CheckForNegativeNumbers(string numbers, string[] delimiters)
+        private string[] CheckForNegativeNumbers(string numbers, List<string> delimiters)
         {
-            var numbersToSum = numbers.Split(delimiters,StringSplitOptions.None);
+            var numbersToSum = numbers.Split(delimiters.ToArray(), StringSplitOptions.None);
             var negativeNumbers = numbersToSum.Where(number => Convert.ToInt32(number) < 0).Aggregate<string, string>(null, (current, number) => current + number);
 
             if (negativeNumbers != null)
