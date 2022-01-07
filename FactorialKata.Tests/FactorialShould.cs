@@ -22,5 +22,13 @@ namespace FactorialKata.Tests
             factorial.Calculate(1).Should().Be(1);
         }
 
+        [Fact]
+        public void Return2forInput2()
+        {
+            var factorial = new Factorial();
+
+            factorial.Calculate(2).Should().Be(2);
+        }
+
     }
 }
