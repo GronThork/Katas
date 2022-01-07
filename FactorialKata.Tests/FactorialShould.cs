@@ -10,6 +10,7 @@ namespace FactorialKata.Tests
         [InlineData(1,0)]
         [InlineData(1,1)]
         [InlineData(2,2)]
+        [InlineData(6,3)]
         public void CalculateTheFactorialForAInput(int expected, int input)
         {
             var factorial = new Factorial();
