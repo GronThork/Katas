@@ -43,5 +43,10 @@ namespace StringCalculator2.Library
 
             return numbersToSum;
         }
+
+        public static bool ThereAreBrackets(string stringInput)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
