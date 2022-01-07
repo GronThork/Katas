@@ -74,5 +74,13 @@ namespace StringCalculator.Tests
             
             Assert.Equal(55,stringC.Add("\\[***]\n50***4***1"));
         }
+        
+        [Fact]
+        public void HaveSeveralSeparatorsInsideBrackets()
+        {
+            var stringC = new StringC();
+            
+            Assert.Equal(55,stringC.Add("\\[***][...]\n50***4...1"));
+        }
     }
 }
