@@ -20,5 +20,17 @@ namespace TicTacToe.Tests
             table.Put(new Token('O'), new Coordinates(0, 0));
             table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('O');
         }
+
+        [Fact]
+        public void PutTheTokenOInTheCoordinate10AndTheTokenXInTheCoordinate00()
+        {
+            var table = new Table();
+            table.Put(new Token('X'), new Coordinates(0, 0));
+            table.Put(new Token('O'), new Coordinates(1, 0));
+            table.GetTokenPosition(new Coordinates(1, 0)).Should().Be('O');
+            table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('X');
+        }
+
+        
     }
 }
