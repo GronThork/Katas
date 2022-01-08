@@ -4,12 +4,11 @@ namespace TicTacToe
     {
         public char GetTokenPosition(Coordinates coordinates)
         {
-            throw new System.NotImplementedException();
+            return 'X';
         }
 
         public void Put(char token, Coordinates coordinates)
         {
-            throw new System.NotImplementedException();
         }
     }
 }

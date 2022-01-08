@@ -6,7 +6,6 @@ namespace TicTacToe
     {
         public Coordinates(int x, int y)
         {
-            throw new NotImplementedException();
         }
     }
 }
