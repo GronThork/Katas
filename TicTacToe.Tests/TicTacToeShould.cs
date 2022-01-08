@@ -14,11 +14,11 @@ namespace TicTacToe.Tests
         }
 
         [Fact]
-        public void PutTheTokenOInTheCoordinate10()
+        public void PutTheTokenOInTheCoordinate00()
         {
             var table = new Table();
-            table.Put('O', new Coordinates(1, 0));
-            table.GetTokenPosition(new Coordinates(1, 0)).Should().Be('O');
+            table.Put('O', new Coordinates(0, 0));
+            table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('O');
         }
 
     }
