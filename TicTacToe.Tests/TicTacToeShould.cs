@@ -9,7 +9,7 @@ namespace TicTacToe.Tests
         public void PutTheTokenXInTheCoordinate00()
         {
             var table = new Table();
-            table.Put('X', new Coordinates(0, 0));
+            table.Put(new Token('X'), new Coordinates(0, 0));
             table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('X');
         }
 
@@ -17,9 +17,8 @@ namespace TicTacToe.Tests
         public void PutTheTokenOInTheCoordinate00()
         {
             var table = new Table();
-            table.Put('O', new Coordinates(0, 0));
+            table.Put(new Token('O'), new Coordinates(0, 0));
             table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('O');
         }
-
     }
 }

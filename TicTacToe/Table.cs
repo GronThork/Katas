@@ -9,9 +9,9 @@ namespace TicTacToe
             return _token;
         }
 
-        public void Put(char token, Coordinates coordinates)
+        public void Put(Token token, Coordinates coordinates)
         {
-            _token = token;
+            _token = token.GetToken();
         }
     }
 }
