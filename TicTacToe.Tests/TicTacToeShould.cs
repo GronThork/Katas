@@ -1,4 +1,4 @@
-using System;
+using FluentAssertions;
 using Xunit;
 
 namespace TicTacToe.Tests
@@ -6,8 +6,11 @@ namespace TicTacToe.Tests
     public class TicTacToeShould
     {
         [Fact]
-        public void Test1()
+        public void PutTheTokenXInTheCoordinate00()
         {
+            var table = new Table();
+            table.Put('X', new Coordinates(0, 0));
+            table.GetTokenPosition(new Coordinates(0, 0)).Should().Be('X');
         }
     }
 }
