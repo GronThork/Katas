@@ -47,9 +47,9 @@ namespace TicTacToe.Tests
         }
 
         [Theory]
+        [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        [InlineData(3)]
         public void EndWhenAllFieldsInARowAreTakenByAPlayer(int row)
         {
             var table = new Table();
