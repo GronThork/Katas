@@ -46,18 +46,19 @@ namespace TicTacToe.Tests
             table.GetTokenPosition(new Position(2, 2)).Should().Be(' ');
         }
 
-        [Fact]
-        public void EndWhenAllFieldsInTheFirstRowAreTakenByAPlayer()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void EndWhenAllFieldsInARowAreTakenByAPlayer(int row)
         {
             var table = new Table();
             const char token = 'X';
-            table.Put(token,new Position(0,0));
-            table.Put(token,new Position(0,1));
-            table.Put(token,new Position(0,2));
+            table.Put(token,new Position(row,0));
+            table.Put(token,new Position(row,1));
+            table.Put(token,new Position(row,2));
 
             table.Winner().Should().Be(token);
         }
-
-        
     }
 }
