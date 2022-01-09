@@ -31,5 +31,10 @@ namespace TicTacToe
                 {new Position(2, 2), new Token(' ')}
             };
         }
+
+        public Token Winner()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
