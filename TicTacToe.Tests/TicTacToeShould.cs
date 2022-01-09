@@ -9,7 +9,7 @@ namespace TicTacToe.Tests
         public void PutTheTokenXInTheCoordinate00()
         {
             var table = new Table();
-            table.Put(new Token('X'), new Position(0, 0));
+            table.Put('X', new Position(0, 0));
             table.GetTokenPosition(new Position(0, 0)).Should().Be('X');
         }
 
@@ -17,7 +17,7 @@ namespace TicTacToe.Tests
         public void PutTheTokenOInTheCoordinate00()
         {
             var table = new Table();
-            table.Put(new Token('O'), new Position(0, 0));
+            table.Put('O', new Position(0, 0));
             table.GetTokenPosition(new Position(0, 0)).Should().Be('O');
         }
 
@@ -25,8 +25,8 @@ namespace TicTacToe.Tests
         public void PutTheTokenOInTheCoordinate10AndTheTokenXInTheCoordinate00()
         {
             var table = new Table();
-            table.Put(new Token('X'), new Position(0, 0));
-            table.Put(new Token('O'), new Position(1, 0));
+            table.Put('X', new Position(0, 0));
+            table.Put('O', new Position(1, 0));
             table.GetTokenPosition(new Position(1, 0)).Should().Be('O');
             table.GetTokenPosition(new Position(0, 0)).Should().Be('X');
         }
@@ -50,7 +50,7 @@ namespace TicTacToe.Tests
         public void EndWhenAllFieldsInTheFirstRowAreTakenByAPlayer()
         {
             var table = new Table();
-            var token = new Token('X');
+            const char token = 'X';
             table.Put(token,new Position(0,0));
             table.Put(token,new Position(0,1));
             table.Put(token,new Position(0,2));

@@ -5,15 +5,17 @@ namespace TicTacToe
     public class Table
     {
         private readonly Dictionary<Position, Token> _grid;
-
+        private readonly Token _tokenX = new('X');
+        private readonly Token _tokenO = new('O');
+        
         public char GetTokenPosition(Position position)
         {
             return _grid[position].GetToken();
         }
 
-        public void Put(Token token, Position position)
+        public void Put(char token, Position position)
         {
-            _grid[position] = token;
+            _grid[position] = token == 'X' ? _tokenX : _tokenO;
         }
 
         public Table()
@@ -32,9 +34,16 @@ namespace TicTacToe
             };
         }
 
-        public Token Winner()
+        public char Winner()
         {
-            throw new System.NotImplementedException();
+            if (_grid[new Position(0,0)] == _tokenX &&
+                _grid[new Position(0,1)] == _tokenX &&
+                _grid[new Position(0,2)] == _tokenX)
+            {
+                return _tokenX.GetToken();
+            }
+
+            return ' ';
         }
     }
 }
