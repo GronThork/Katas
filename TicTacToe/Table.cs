@@ -20,8 +20,15 @@ namespace TicTacToe
         {
             _grid = new Dictionary<Position, Token>
             {
-                {new Position(0, 0), null},
-                {new Position(1, 0), null}
+                {new Position(0, 0), new Token(' ')},
+                {new Position(0, 1), new Token(' ')},
+                {new Position(0, 2), new Token(' ')},
+                {new Position(1, 0), new Token(' ')},
+                {new Position(1, 1), new Token(' ')},
+                {new Position(1, 2), new Token(' ')},
+                {new Position(2, 0), new Token(' ')},
+                {new Position(2, 1), new Token(' ')},
+                {new Position(2, 2), new Token(' ')}
             };
         }
     }
