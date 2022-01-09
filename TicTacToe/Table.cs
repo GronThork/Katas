@@ -36,27 +36,15 @@ namespace TicTacToe
 
         public char Winner()
         {
-            if (_grid[new Position(0,0)] == _tokenX &&
-                _grid[new Position(0,1)] == _tokenX &&
-                _grid[new Position(0,2)] == _tokenX)
+            for (var row = 0; row < 4; row++)
             {
-                return _tokenX.GetToken();
+                if (_grid[new Position(row, 0)] == _tokenX &&
+                    _grid[new Position(row, 1)] == _tokenX &&
+                    _grid[new Position(row, 2)] == _tokenX)
+                {
+                    return _tokenX.GetToken();
+                }
             }
-            
-            if (_grid[new Position(1,0)] == _tokenX &&
-                _grid[new Position(1,1)] == _tokenX &&
-                _grid[new Position(1,2)] == _tokenX)
-            {
-                return _tokenX.GetToken();
-            }
-            
-            if (_grid[new Position(2,0)] == _tokenX &&
-                _grid[new Position(2,1)] == _tokenX &&
-                _grid[new Position(2,2)] == _tokenX)
-            {
-                return _tokenX.GetToken();
-            }
-
             return ' ';
         }
     }

@@ -50,7 +50,7 @@ namespace TicTacToe.Tests
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        public void EndWhenAllFieldsInARowAreTakenByAPlayer(int row)
+        public void EndWhenAllFieldsInARowAreTakenByTheTokenX(int row)
         {
             var table = new Table();
             const char token = 'X';
