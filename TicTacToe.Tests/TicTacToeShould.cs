@@ -31,6 +31,20 @@ namespace TicTacToe.Tests
             table.GetTokenPosition(new Position(0, 0)).Should().Be('X');
         }
 
+        [Fact]
+        public void HaveA3x3Grid()
+        {
+            var table = new Table();
+            table.GetTokenPosition(new Position(0, 0)).Should().BeNull();
+            table.GetTokenPosition(new Position(0, 1)).Should().BeNull();
+            table.GetTokenPosition(new Position(0, 2)).Should().BeNull();
+            table.GetTokenPosition(new Position(1, 0)).Should().BeNull();
+            table.GetTokenPosition(new Position(1, 1)).Should().BeNull();
+            table.GetTokenPosition(new Position(1, 2)).Should().BeNull();
+            table.GetTokenPosition(new Position(2, 0)).Should().BeNull();
+            table.GetTokenPosition(new Position(2, 1)).Should().BeNull();
+            table.GetTokenPosition(new Position(2, 2)).Should().BeNull();
+        }
         
     }
 }
