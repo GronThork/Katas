@@ -41,9 +41,7 @@ namespace TicTacToe
                 if (_grid[new Position(row, 0)] == _tokenX &&
                     _grid[new Position(row, 1)] == _tokenX &&
                     _grid[new Position(row, 2)] == _tokenX)
-                {
                     return _tokenX.GetToken();
-                }
             }
             return ' ';
         }

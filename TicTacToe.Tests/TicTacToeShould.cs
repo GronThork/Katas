@@ -60,5 +60,20 @@ namespace TicTacToe.Tests
 
             table.Winner().Should().Be(token);
         }
+        
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1)]
+        [InlineData(2)]
+        public void EndWhenAllFieldsInARowAreTakenByTheTokenO(int row)
+        {
+            var table = new Table();
+            const char token = 'X';
+            table.Put(token,new Position(row,0));
+            table.Put(token,new Position(row,1));
+            table.Put(token,new Position(row,2));
+
+            table.Winner().Should().Be(token);
+        }
     }
 }
