@@ -35,5 +35,10 @@ namespace MarsRover.Api
         {
             return HashCode.Combine(_x, _y);
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(_x)}: {_x}, {nameof(_y)}: {_y}";
+        }
     }
 }
