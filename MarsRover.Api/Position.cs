@@ -23,6 +23,11 @@ namespace MarsRover.Api
             _y--;
         }
 
+        public void IncrementX()
+        {
+            _x++;
+        }
+        
         protected bool Equals(Position other)
         {
             return _x == other._x && _y == other._y;
@@ -45,5 +50,6 @@ namespace MarsRover.Api
         {
             return $"{nameof(_x)}: {_x}, {nameof(_y)}: {_y}";
         }
+        
     }
 }
