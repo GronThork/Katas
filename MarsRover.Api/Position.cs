@@ -17,6 +17,11 @@ namespace MarsRover.Api
         {
             _y++;
         }
+        
+        public void DecrementY()
+        {
+            _y--;
+        }
 
         protected bool Equals(Position other)
         {

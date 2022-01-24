@@ -18,7 +18,15 @@ namespace MarsRover.Api
 
         public void Move(List<Command> command)
         {
-            _position.IncrementY();
+            if (_direction == Direction.S)
+            {
+                _position.DecrementY();
+            }
+
+            if (_direction == Direction.N)
+            {
+                _position.IncrementY();
+            }
         }
     }
 }
