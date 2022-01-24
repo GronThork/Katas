@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using FluentAssertions;
 using MarsRover.Api;
 using Xunit;
@@ -9,8 +10,9 @@ namespace MarsRover.Tests
         [Fact]
         public void MoveFromPosition00NorthTo01North()
         {
-            var rover = new Rover(new Position(0,0),'N');
-            char[] commands = {'f'};
+            var rover = new Rover(new Position(0,0),Direction.N); 
+            var commands = new List<Command>();
+            commands.Add(Command.F);
             
             rover.Move(commands);
 

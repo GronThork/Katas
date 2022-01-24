@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace MarsRover.Api
 {
@@ -6,19 +7,18 @@ namespace MarsRover.Api
     {
         public Position Position => _position;
         private Position _position;
-        private readonly char _direction;
+        private Direction _direction;
         
 
-        public Rover(Position position, char direction)
+        public Rover(Position position, Direction direction)
         {
             _position = position;
             _direction = direction;
         }
 
-        public void Move(char[] commands)
+        public void Move(List<Command> command)
         {
             _position.IncrementY();
         }
-        
     }
 }
