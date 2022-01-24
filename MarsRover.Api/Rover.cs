@@ -4,8 +4,10 @@ namespace MarsRover.Api
 {
     public class Rover
     {
-        private readonly Position _position;
+        public Position Position => _position;
+        private Position _position;
         private readonly char _direction;
+        
 
         public Rover(Position position, char direction)
         {
@@ -17,10 +19,6 @@ namespace MarsRover.Api
         {
             _position.IncrementY();
         }
-
-        public Position GetPosition()
-        {
-            return _position;
-        }
+        
     }
 }

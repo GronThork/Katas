@@ -14,7 +14,7 @@ namespace MarsRover.Tests
             
             rover.Move(commands);
 
-            rover.GetPosition().Should().Be(new Position(0,1));
+            rover.Position.Should().Be(new Position(0,1));
         }
     }
 }
