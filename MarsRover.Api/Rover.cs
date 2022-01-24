@@ -4,19 +4,23 @@ namespace MarsRover.Api
 {
     public class Rover
     {
+        private readonly Position _position;
+        private readonly char _direction;
+
         public Rover(Position position, char direction)
         {
-            throw new NotImplementedException();
+            _position = position;
+            _direction = direction;
         }
 
         public void Move(char[] commands)
         {
-            throw new NotImplementedException();
+            _position.IncrementY();
         }
 
         public Position GetPosition()
         {
-            throw new NotImplementedException();
+            return _position;
         }
     }
 }
