@@ -28,6 +28,12 @@ namespace MarsRover.Api
             _x++;
         }
         
+        public void DecrementX()
+        {
+            _x--;
+        }
+
+        
         protected bool Equals(Position other)
         {
             return _x == other._x && _y == other._y;
@@ -50,6 +56,5 @@ namespace MarsRover.Api
         {
             return $"{nameof(_x)}: {_x}, {nameof(_y)}: {_y}";
         }
-        
     }
 }

@@ -31,6 +31,11 @@ namespace MarsRover.Api
             {
                 _position.IncrementX();
             }
+            
+            if (_direction == Direction.W)
+            {
+                _position.DecrementX();
+            }
         }
     }
 }
