@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace MarsRover.Api
 {
@@ -16,23 +17,39 @@ namespace MarsRover.Api
             _direction = direction;
         }
 
-        public void Move(List<Command> command)
+        public void Move(List<Command> commands)
+        {
+            IPositionAxis positionAxis;
+            
+            foreach (var command in commands)
+                {
+                    if (command == Command.F)
+                    {
+                        positionAxis = FactoryPositionMove();
+                        positionAxis.Move();
+                    }
+                }
+        }
+
+        public IPositionAxis FactoryPositionMove()
         {
             switch (_direction)
             {
                 case Direction.S:
-                    _position.DecrementY();
+                    return new PositionDecrementY(_position);
                     break;
                 case Direction.N:
-                    _position.IncrementY();
+                    return new PositionIncrementY(_position);
                     break;
                 case Direction.E:
-                    _position.IncrementX();
+                    return new PositionIncrementX(_position);
                     break;
                 case Direction.W:
-                    _position.DecrementX();
-                    break;
+                    return new PositionDecrementX(_position);
+                    break; 
             }
+
+            throw new Exception();
         }
     }
 }
