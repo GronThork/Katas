@@ -33,5 +33,16 @@ namespace MarsRover.Tests
 
             rover.Position.Should().Be(new Position(0,0));
         }
+        
+        [Fact]
+        public void MoveFromPosition10EastTo00East()
+        {
+            var rover = new Rover(new Position(1,0),Direction.E); 
+            var commands = new List<Command> {Command.B};
+
+            rover.Execute(commands);
+
+            rover.Position.Should().Be(new Position(0,0));
+        }
     }
 }
