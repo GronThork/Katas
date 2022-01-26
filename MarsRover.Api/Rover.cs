@@ -32,7 +32,14 @@ namespace MarsRover.Api
 
                 if (command == Command.B)
                 {
-                    _position.DecrementY();
+                    if (_direction == Direction.N)
+                    {
+                        _position.DecrementY();
+                    }
+                    if (_direction == Direction.E)
+                    {
+                        _position.DecrementX();
+                    }
                 }
             }
         }
