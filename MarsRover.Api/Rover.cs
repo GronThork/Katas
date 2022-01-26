@@ -8,8 +8,8 @@ namespace MarsRover.Api
     {
         public Position Position => _position;
         private Position _position;
-        private Direction _direction;
-        
+        private readonly Direction _direction;
+
 
         public Rover(Position position, Direction direction)
         {
@@ -20,36 +20,15 @@ namespace MarsRover.Api
         public void Execute(List<Command> commands)
         {
             IPositionAxis positionAxis;
-            
+            FactoryPositionForward factoryPositionForward = new FactoryPositionForward();
             foreach (var command in commands)
                 {
                     if (command == Command.F)
                     {
-                        positionAxis = FactoryPositionMove();
+                        positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
                         positionAxis.Move(_position);
                     }
                 }
-        }
-
-        public IPositionAxis FactoryPositionMove()
-        {
-            switch (_direction)
-            {
-                case Direction.S:
-                    return new PositionDecrementY();
-                    break;
-                case Direction.N:
-                    return new PositionIncrementY();
-                    break;
-                case Direction.E:
-                    return new PositionIncrementX();
-                    break;
-                case Direction.W:
-                    return new PositionDecrementX();
-                    break; 
-            }
-
-            throw new Exception();
         }
     }
 }
