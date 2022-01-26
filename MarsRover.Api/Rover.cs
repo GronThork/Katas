@@ -40,10 +40,13 @@ namespace MarsRover.Api
                     {
                         _position.DecrementX();
                     }
-
                     if (_direction == Direction.S)
                     {
                         _position.IncrementY();
+                    }
+                    if (_direction == Direction.W)
+                    {
+                        _position.IncrementX();
                     }
                 }
             }
