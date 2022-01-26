@@ -24,9 +24,9 @@ namespace MarsRover.Tests
         }
         
         [Fact]
-        public void MoveFromPosition10NorthTo00North()
+        public void MoveFromPosition01NorthTo00North()
         {
-            var rover = new Rover(new Position(1,0),Direction.N); 
+            var rover = new Rover(new Position(0,1),Direction.N); 
             var commands = new List<Command> {Command.B};
 
             rover.Execute(commands);

@@ -29,6 +29,11 @@ namespace MarsRover.Api
                     positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
                     positionAxis.Move(_position);
                 }
+
+                if (command == Command.B)
+                {
+                    _position.DecrementY();
+                }
             }
         }
     }
