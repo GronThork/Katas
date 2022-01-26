@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Xml.Schema;
 using FluentAssertions;
 using MarsRover.Api;
 using Xunit;
@@ -7,48 +8,30 @@ namespace MarsRover.Tests
 {
     public class RoverShould
     {
-        [Fact]
-        public void MoveFromPosition00NorthTo01North()
+        [Theory]
+        [InlineData(Direction.N,0,1)]
+        [InlineData(Direction.S,0,-1)]
+        [InlineData(Direction.E,1,0)]
+        [InlineData(Direction.W,-1,0)]
+        public void MoveForwardFromPosition00(Direction direction, int x, int y)
         {
-            var rover = new Rover(new Position(0,0),Direction.N); 
+            var rover = new Rover(new Position(0,0),direction); 
             var commands = new List<Command> {Command.F};
 
             rover.Execute(commands);
 
-            rover.Position.Should().Be(new Position(0,1));
+            rover.Position.Should().Be(new Position(x,y));
         }
         
         [Fact]
-        public void MoveFromPosition00SouthTo0Minus1South()
+        public void MoveFromPosition10NorthTo00North()
         {
-            var rover = new Rover(new Position(0,0),Direction.S); 
-            var commands = new List<Command> {Command.F};
+            var rover = new Rover(new Position(1,0),Direction.N); 
+            var commands = new List<Command> {Command.B};
 
             rover.Execute(commands);
 
-            rover.Position.Should().Be(new Position(0,-1));
-        }
-        
-        [Fact]
-        public void MoveFromPosition00EastTo10East()
-        {
-            var rover = new Rover(new Position(0,0),Direction.E); 
-            var commands = new List<Command> {Command.F};
-
-            rover.Execute(commands);
-
-            rover.Position.Should().Be(new Position(1,0));
-        }
-        
-        [Fact]
-        public void MoveFromPosition00WestToMinus10West()
-        {
-            var rover = new Rover(new Position(0,0),Direction.W); 
-            var commands = new List<Command> {Command.F};
-
-            rover.Execute(commands);
-
-            rover.Position.Should().Be(new Position(-1,0));
+            rover.Position.Should().Be(new Position(0,0));
         }
     }
 }

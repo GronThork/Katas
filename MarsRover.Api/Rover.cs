@@ -20,15 +20,16 @@ namespace MarsRover.Api
         public void Execute(List<Command> commands)
         {
             IPositionAxis positionAxis;
-            FactoryPositionForward factoryPositionForward = new FactoryPositionForward();
+            var factoryPositionForward = new FactoryPositionForward();
+            
             foreach (var command in commands)
+            {
+                if (command == Command.F)
                 {
-                    if (command == Command.F)
-                    {
-                        positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
-                        positionAxis.Move(_position);
-                    }
+                    positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
+                    positionAxis.Move(_position);
                 }
+            }
         }
     }
 }

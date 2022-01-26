@@ -2,6 +2,7 @@
 {
     public enum Command
     {
-        F
+        F,
+        B
     }
 }
