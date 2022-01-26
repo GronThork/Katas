@@ -5,7 +5,7 @@ using Xunit;
 
 namespace MarsRover.Tests
 {
-    public class MarsRoverShould
+    public class RoverShould
     {
         [Fact]
         public void MoveFromPosition00NorthTo01North()

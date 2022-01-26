@@ -32,7 +32,6 @@ namespace MarsRover.Api
         {
             _x--;
         }
-
         
         protected bool Equals(Position other)
         {
