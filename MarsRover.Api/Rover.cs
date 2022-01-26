@@ -21,15 +21,14 @@ namespace MarsRover.Api
         {
             foreach (var command in commands)
             {
-                MoveForward(command);
-                MoveBackward(command);
+                IPositionAxis positionAxis = null;
+                MoveForward(command,new FactoryPositionForward(), positionAxis);
+                MoveBackward(command, new FactoryPositionBackward(), positionAxis);
             }
         }
 
-        private void MoveBackward(Command command)
+        private void MoveBackward(Command command, IFactoryPosition factoryPositionBackward, IPositionAxis positionAxis)
         {
-            IPositionAxis positionAxis;
-            IFactoryPosition factoryPositionBackward = new FactoryPositionBackward();
             if (command == Command.B)
             {
                 positionAxis = factoryPositionBackward.FactoryPositionMove(_direction);
@@ -37,10 +36,8 @@ namespace MarsRover.Api
             }
         }
 
-        private void MoveForward(Command command)
+        private void MoveForward(Command command, IFactoryPosition factoryPositionForward, IPositionAxis positionAxis)
         {
-            IPositionAxis positionAxis;
-            IFactoryPosition factoryPositionForward = new FactoryPositionForward();
             if (command == Command.F)
             {
                 positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
