@@ -13,7 +13,7 @@ namespace MarsRover.Tests
             var rover = new Rover(new Position(0,0),Direction.N); 
             var commands = new List<Command> {Command.F};
 
-            rover.Move(commands);
+            rover.Execute(commands);
 
             rover.Position.Should().Be(new Position(0,1));
         }
@@ -24,7 +24,7 @@ namespace MarsRover.Tests
             var rover = new Rover(new Position(0,0),Direction.S); 
             var commands = new List<Command> {Command.F};
 
-            rover.Move(commands);
+            rover.Execute(commands);
 
             rover.Position.Should().Be(new Position(0,-1));
         }
@@ -35,7 +35,7 @@ namespace MarsRover.Tests
             var rover = new Rover(new Position(0,0),Direction.E); 
             var commands = new List<Command> {Command.F};
 
-            rover.Move(commands);
+            rover.Execute(commands);
 
             rover.Position.Should().Be(new Position(1,0));
         }
@@ -46,7 +46,7 @@ namespace MarsRover.Tests
             var rover = new Rover(new Position(0,0),Direction.W); 
             var commands = new List<Command> {Command.F};
 
-            rover.Move(commands);
+            rover.Execute(commands);
 
             rover.Position.Should().Be(new Position(-1,0));
         }

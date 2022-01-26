@@ -17,7 +17,7 @@ namespace MarsRover.Api
             _direction = direction;
         }
 
-        public void Move(List<Command> commands)
+        public void Execute(List<Command> commands)
         {
             IPositionAxis positionAxis;
             
@@ -26,7 +26,7 @@ namespace MarsRover.Api
                     if (command == Command.F)
                     {
                         positionAxis = FactoryPositionMove();
-                        positionAxis.Move();
+                        positionAxis.Move(_position);
                     }
                 }
         }
@@ -36,16 +36,16 @@ namespace MarsRover.Api
             switch (_direction)
             {
                 case Direction.S:
-                    return new PositionDecrementY(_position);
+                    return new PositionDecrementY();
                     break;
                 case Direction.N:
-                    return new PositionIncrementY(_position);
+                    return new PositionIncrementY();
                     break;
                 case Direction.E:
-                    return new PositionIncrementX(_position);
+                    return new PositionIncrementX();
                     break;
                 case Direction.W:
-                    return new PositionDecrementX(_position);
+                    return new PositionDecrementX();
                     break; 
             }
 

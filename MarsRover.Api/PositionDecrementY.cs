@@ -2,18 +2,9 @@
 {
     public class PositionDecrementY : IPositionAxis
     {
-        private readonly Position _position;
-
-        public PositionDecrementY(Position position)
+        public void Move(Position position)
         {
-            _position = position;
-        }
-        
-        public Position Move()
-        {
-            _position.DecrementY();
-
-            return _position;
+            position.DecrementY();
         }
     }
 }

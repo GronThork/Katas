@@ -2,6 +2,6 @@
 {
     public interface IPositionAxis
     {
-        Position Move();
+        void Move(Position position);
     }
 }
