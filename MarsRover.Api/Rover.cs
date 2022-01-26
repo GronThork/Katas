@@ -19,36 +19,32 @@ namespace MarsRover.Api
 
         public void Execute(List<Command> commands)
         {
-            IPositionAxis positionAxis;
-            var factoryPositionForward = new FactoryPositionForward();
-            
             foreach (var command in commands)
             {
-                if (command == Command.F)
-                {
-                    positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
-                    positionAxis.Move(_position);
-                }
+                MoveForward(command);
+                MoveBackward(command);
+            }
+        }
 
-                if (command == Command.B)
-                {
-                    if (_direction == Direction.N)
-                    {
-                        _position.DecrementY();
-                    }
-                    if (_direction == Direction.E)
-                    {
-                        _position.DecrementX();
-                    }
-                    if (_direction == Direction.S)
-                    {
-                        _position.IncrementY();
-                    }
-                    if (_direction == Direction.W)
-                    {
-                        _position.IncrementX();
-                    }
-                }
+        private void MoveBackward(Command command)
+        {
+            IPositionAxis positionAxis;
+            IFactoryPosition factoryPositionBackward = new FactoryPositionBackward();
+            if (command == Command.B)
+            {
+                positionAxis = factoryPositionBackward.FactoryPositionMove(_direction);
+                positionAxis.Move(_position);
+            }
+        }
+
+        private void MoveForward(Command command)
+        {
+            IPositionAxis positionAxis;
+            IFactoryPosition factoryPositionForward = new FactoryPositionForward();
+            if (command == Command.F)
+            {
+                positionAxis = factoryPositionForward.FactoryPositionMove(_direction);
+                positionAxis.Move(_position);
             }
         }
     }

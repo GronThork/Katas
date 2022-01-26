@@ -2,7 +2,7 @@
 
 namespace MarsRover.Api
 {
-    public class FactoryPositionForward
+    public class FactoryPositionForward : IFactoryPosition
     {
         public IPositionAxis FactoryPositionMove(Direction direction)
         {
@@ -12,7 +12,7 @@ namespace MarsRover.Api
                 Direction.N => new PositionIncrementY(),
                 Direction.E => new PositionIncrementX(),
                 Direction.W => new PositionDecrementX(),
-                _ => throw new Exception()
+                _ => throw new ArgumentOutOfRangeException()
             };
         }
     }
