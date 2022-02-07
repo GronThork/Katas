@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Api", "MarsRover.Api\MarsRover.Api.csproj", "{DC0D8F53-1706-4BEE-ADB5-8706199C5924}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzKata", "FizzBuzz3\FizzBuzzKata\FizzBuzzKata.csproj", "{D58F8841-8DA3-46AF-ADC7-43F4941977FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Tests", "MarsRover.Tests\MarsRover.Tests.csproj", "{98C57EB3-0F5D-4145-931B-5E8F417D7A59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzKata.Tests", "FizzBuzz3\FizzBuzzKata.Tests\FizzBuzzKata.Tests.csproj", "{357D2118-E641-4334-B129-E85E5C4A1470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC0D8F53-1706-4BEE-ADB5-8706199C5924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC0D8F53-1706-4BEE-ADB5-8706199C5924}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC0D8F53-1706-4BEE-ADB5-8706199C5924}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC0D8F53-1706-4BEE-ADB5-8706199C5924}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98C57EB3-0F5D-4145-931B-5E8F417D7A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98C57EB3-0F5D-4145-931B-5E8F417D7A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98C57EB3-0F5D-4145-931B-5E8F417D7A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98C57EB3-0F5D-4145-931B-5E8F417D7A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58F8841-8DA3-46AF-ADC7-43F4941977FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58F8841-8DA3-46AF-ADC7-43F4941977FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58F8841-8DA3-46AF-ADC7-43F4941977FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58F8841-8DA3-46AF-ADC7-43F4941977FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357D2118-E641-4334-B129-E85E5C4A1470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357D2118-E641-4334-B129-E85E5C4A1470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357D2118-E641-4334-B129-E85E5C4A1470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357D2118-E641-4334-B129-E85E5C4A1470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
