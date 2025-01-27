@@ -19,6 +19,6 @@ public static class FizzBuzz
 {
     public static string Convert(int input)
     {
-        return "1";
+        return input == 2 ? "2" : "1";
     }
 }
