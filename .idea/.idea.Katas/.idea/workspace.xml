@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72ab060d-3162-49ac-9599-317f7f779b22" name="Changes" comment="feat: Convert2To2">
+      <change beforePath="$PROJECT_DIR$/FizzBuzz/FizzBuzzShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FizzBuzz/FizzBuzzShould.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://V:/repos/Katas/FizzBuzz/FizzBuzzShould.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="feat: Convert2To2">
+      <option name="closed" value="true" />
+      <created>1737969699841</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737969699841</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Convert2To2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Convert2To2" />
+  </component>
+</project>
