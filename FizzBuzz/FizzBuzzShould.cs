@@ -11,22 +11,13 @@ public class FizzBuzzShould
         Assert.Equal(input.ToString(), FizzBuzz.Convert(input));
     }
 
-    [Fact]
-    public void Convert3ToFizz()
+    [Theory]
+    [InlineData(3)]
+    [InlineData(6)]
+    [InlineData(9)]
+    public void ConvertMultipleOf3ToFizz(int input)
     {
-        Assert.Equal("Fizz",FizzBuzz.Convert(3));
-    }
-    
-    [Fact]
-    public void Convert6ToFizz()
-    {
-        Assert.Equal("Fizz",FizzBuzz.Convert(6));
-    }
-    
-    [Fact]
-    public void Convert9ToFizz()
-    {
-        Assert.Equal("Fizz",FizzBuzz.Convert(9));
+        Assert.Equal("Fizz",FizzBuzz.Convert(input));
     }
 }
 
@@ -34,11 +25,7 @@ public static class FizzBuzz
 {
     public static string Convert(int input)
     {
-        if (input == 3)
-            return "Fizz";
-        if (input == 6)
-            return "Fizz";
-        if (input == 9)
+        if (input % 3 == 0)
             return "Fizz";
         
         return input.ToString();
