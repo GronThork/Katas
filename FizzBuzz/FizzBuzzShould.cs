@@ -28,24 +28,16 @@ public class FizzBuzzShould
     {
         Assert.Equal("Buzz",FizzBuzz.Convert(input));
     }
+    
+    [Theory]
+    [InlineData(15)]
+    [InlineData(30)]
+    [InlineData(45)]
+    public void ConvertMultipleOf3And5ToFizzBuzz(int input)
+    {
+        Assert.Equal("FizzBuzz",FizzBuzz.Convert(input));
+    }
 
-    [Fact]
-    public void Convert15ToFizzBuzz()
-    {
-        Assert.Equal("FizzBuzz",FizzBuzz.Convert(15));
-    }
-    
-    [Fact]
-    public void Convert30ToFizzBuzz()
-    {
-        Assert.Equal("FizzBuzz",FizzBuzz.Convert(30));
-    }
-    
-    [Fact]
-    public void Convert45ToFizzBuzz()
-    {
-        Assert.Equal("FizzBuzz",FizzBuzz.Convert(45));
-    }
 }
 
 public static class FizzBuzz
