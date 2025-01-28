@@ -43,18 +43,11 @@ public static class FizzBuzz
 {
     public static string Convert(int input)
     {
-        if (input == 5)
+        if (input % 5 == 0)
         {
             return "Buzz";
         }
-        if (input == 10)
-        {
-            return "Buzz";
-        }
-        if (input == 15)
-        {
-            return "Buzz";
-        }
+
         if (input % 3 == 0)
             return "Fizz";
         
