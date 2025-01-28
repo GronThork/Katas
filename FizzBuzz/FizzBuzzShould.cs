@@ -37,5 +37,4 @@ public class FizzBuzzShould
     {
         Assert.Equal("FizzBuzz",FizzBuzz.Convert(input));
     }
-
 }
