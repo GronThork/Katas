@@ -16,6 +16,12 @@ public class FizzBuzzShould
     {
         Assert.Equal("Fizz",FizzBuzz.Convert(3));
     }
+    
+    [Fact]
+    public void Convert6ToFizz()
+    {
+        Assert.Equal("Fizz",FizzBuzz.Convert(6));
+    }
 }
 
 public static class FizzBuzz
