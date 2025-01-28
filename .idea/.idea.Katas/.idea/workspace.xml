@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ab060d-3162-49ac-9599-317f7f779b22" name="Changes" comment="feat: Convert2To2">
-      <change beforePath="$PROJECT_DIR$/FizzBuzz/FizzBuzzShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FizzBuzz/FizzBuzzShould.cs" afterDir="false" />
+    <list default="true" id="72ab060d-3162-49ac-9599-317f7f779b22" name="Changes" comment="refactor: generic solution">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Katas/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +14,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://V:/repos/Katas/FizzBuzz/FizzBuzzShould.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://V:/repos/Katas/FizzBuzz/FizzBuzzShould.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="TaskManager">
@@ -31,13 +33,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737969699841</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Convert4To4">
+      <option name="closed" value="true" />
+      <created>1737969874277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737969874277</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor: generic solution">
+      <option name="closed" value="true" />
+      <created>1737970044903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737970044903</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Convert2To2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Convert2To2" />
+    <MESSAGE value="feat: Convert4To4" />
+    <MESSAGE value="refactor: generic solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: generic solution" />
   </component>
 </project>
