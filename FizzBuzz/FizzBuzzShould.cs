@@ -20,22 +20,13 @@ public class FizzBuzzShould
         Assert.Equal("Fizz",FizzBuzz.Convert(input));
     }
 
-    [Fact]
-    public void Convert5ToBuzz()
+    [Theory]
+    [InlineData(5)]
+    [InlineData(10)]
+    [InlineData(15)]
+    public void ConvertMultipleOf5ToBuzz(int input)
     {
-        Assert.Equal("Buzz",FizzBuzz.Convert(5));
-    }
-    
-    [Fact]
-    public void Convert10ToBuzz()
-    {
-        Assert.Equal("Buzz",FizzBuzz.Convert(10));
-    }
-    
-    [Fact]
-    public void Convert15ToBuzz()
-    {
-        Assert.Equal("Buzz",FizzBuzz.Convert(15));
+        Assert.Equal("Buzz",FizzBuzz.Convert(input));
     }
 }
 
@@ -44,9 +35,7 @@ public static class FizzBuzz
     public static string Convert(int input)
     {
         if (input % 5 == 0)
-        {
             return "Buzz";
-        }
 
         if (input % 3 == 0)
             return "Fizz";
