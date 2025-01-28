@@ -22,6 +22,9 @@ public static class FizzBuzz
 {
     public static string Convert(int input)
     {
+        if (input == 3)
+            return "Fizz";
+        
         return input.ToString();
     }
 }
