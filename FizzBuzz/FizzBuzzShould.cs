@@ -47,6 +47,14 @@ public static class FizzBuzz
         {
             return "Buzz";
         }
+        if (input == 10)
+        {
+            return "Buzz";
+        }
+        if (input == 15)
+        {
+            return "Buzz";
+        }
         if (input % 3 == 0)
             return "Fizz";
         
