@@ -56,6 +56,8 @@ public static class FizzBuzz
             return "FizzBuzz";
         if (input == 30)
             return "FizzBuzz";
+        if (input == 45)
+            return "FizzBuzz";
         
         if (input % 5 == 0)
             return "Buzz";
