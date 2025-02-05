@@ -6,14 +6,21 @@ public class AnagramShould
     public void ReturnEmptyListWhenInputIsNull()
     {
         
-        Assert.Equal("", Anagram.Calculate());
+        Assert.Equal("", Anagram.Calculate(""));
+    }
+    
+    [Fact]
+    public void ReturnAWhenInputIsA()
+    {
+        
+        Assert.Equal("A", Anagram.Calculate("A"));
     }
 
     private static class Anagram
     {
-        public static string Calculate()
+        public static string Calculate(string word)
         {
-            return string.Empty;
+            return word;
         }
     }
 }
