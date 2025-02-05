@@ -5,24 +5,22 @@ public class AnagramShould
     [Fact]
     public void ReturnEmptyListWhenInputIsNull()
     {
-        
         Assert.Equal([""], Anagram.Of(""));
     }
-    
+
     [Fact]
     public void ReturnAWhenInputIsA()
     {
-        
         Assert.Equal(["A"], Anagram.Of("A"));
     }
-    
+
     [Fact]
     public void ReturnBAWhenInputIsAB()
     {
-        var expectedWords = new[] { "AB", "BA"};
+        var expectedWords = new[] { "AB", "BA" };
         Assert.Equal(expectedWords, Anagram.Of("AB"));
     }
-    
+
     [Fact]
     public void ReturnAnagramsWhenInputIsABC()
     {
@@ -36,25 +34,14 @@ public class AnagramShould
         {
             if (word.Length < 2)
                 return [word];
-            if (word.Length == 2)
-            {
-                return
-                [
-                    word,
-                    word[1].ToString() + word[0].ToString()
-                ];
-            }
-            
-            return
-            [
-                word[0] + Of(DropCharacter(word, 0))[0],
-                word[0] + Of(DropCharacter(word, 0))[1],
-                word[1] + Of(DropCharacter(word, 1))[0],
-                word[1] + Of(DropCharacter(word, 1))[1],
-                word[2] + Of(DropCharacter(word, 2))[0],
-                word[2] + Of(DropCharacter(word, 2))[1]
-            ];
 
+            var anagrams = new List<string>();
+
+            for (var i = 0; i < word.Length; i++)
+                for (var j = 0; j < word.Length - 1; j++)
+                    anagrams.Add(word[i] + Of(DropCharacter(word, i))[j]);
+            
+            return anagrams;
         }
 
         private static string DropCharacter(string word, int index)
