@@ -10,9 +10,13 @@ public static class Anagram
         var anagrams = new List<string>();
 
         for (var i = 0; i < word.Length; i++)
-        for (var j = 0; j < Of(DropCharacter(word, i)).Count; j++)
-            anagrams.Add(word[i] + Of(DropCharacter(word, i))[j]);
-
+        {
+            var droppedCharacter = word[i];
+            var anagramsOfRest = Of(DropCharacter(word, i));
+            foreach (var anagramOfRest in anagramsOfRest)
+                anagrams.Add(droppedCharacter + anagramOfRest);
+        }
+        
         return anagrams;
     }
 
