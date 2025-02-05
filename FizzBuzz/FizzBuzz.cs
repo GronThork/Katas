@@ -1,6 +1,6 @@
 namespace FizzBuzz;
 
-internal static class FizzBuzz
+public static class FizzBuzz
 {
     public static string Convert(int input)
     {
