@@ -27,26 +27,10 @@ public class AnagramShould
         var expectedWords = new[] { "ABC", "ACB", "BAC", "BCA", "CAB", "CBA" };
         Assert.Equal(expectedWords, Anagram.Of("ABC"));
     }
-
-    private static class Anagram
+    
+    [Fact]
+    public void ReturnAnagramsWhenInputIsAWordWith4Letters()
     {
-        public static List<string> Of(string word)
-        {
-            if (word.Length < 2)
-                return [word];
-
-            var anagrams = new List<string>();
-
-            for (var i = 0; i < word.Length; i++)
-                for (var j = 0; j < word.Length - 1; j++)
-                    anagrams.Add(word[i] + Of(DropCharacter(word, i))[j]);
-            
-            return anagrams;
-        }
-
-        private static string DropCharacter(string word, int index)
-        {
-            return new string(word.Where((_, i) => i != index).ToArray());
-        }
+        Assert.Equal(24, Anagram.Of("ABCD").Count);
     }
 }
