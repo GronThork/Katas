@@ -36,23 +36,25 @@ public class AnagramShould
         {
             if (word.Length < 2)
                 return [word];
-            if (word.Length > 2)
+            if (word.Length == 2)
             {
-                return new List<string>()
-                {
-                    "ABC",
-                    "ACB",
-                    "BCA",
-                    "BAC",
-                    "CAB",
-                    "CBA"
-                };
+                return
+                [
+                    word,
+                    word[1].ToString() + word[0].ToString()
+                ];
             }
+            
             return
             [
-                word,
-                word[1].ToString() + word[0].ToString()
+                word[0] + Calculate("BC")[0],
+                word[0] + Calculate("BC")[1],
+                word[1] + Calculate("CA")[0],
+                word[1] + Calculate("CA")[1],
+                word[2] + Calculate("AB")[0],
+                word[2] + Calculate("AB")[1]
             ];
+
         }
     }
 }
