@@ -1,17 +1,17 @@
 namespace Anagram;
 
-public abstract class AnagramShould
+public class AnagramShould
 {
     [Fact]
-    public void ReturnCodeTuningFromDocumenting()
+    public void ReturnEmptyListWhenInputIsNull()
     {
         
-        Assert.Equal("code tuning", Anagram.DocumentingWord());
+        Assert.Equal("", Anagram.Calculate());
     }
 
     private static class Anagram
     {
-        public static string DocumentingWord()
+        public static string Calculate()
         {
             return string.Empty;
         }

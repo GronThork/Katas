@@ -1,7 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3ecc3e3e_002D8ae2_002D4685_002D9b7d_002D5c58638ce7f5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FizzBuzzShould" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E3E2E402-6BD9-4621-ABD3-4BA4CC91C277::net8.0::FizzBuzz.FizzBuzzShould&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::5C27370A-B3DE-49D4-987B-7D8BD4D53290::net8.0::Anagram.UnitTest1.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::5C27370A-B3DE-49D4-987B-7D8BD4D53290::net8.0::Anagram.AnagramShould.ReturnEmptyListWhenInputIsNull&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
