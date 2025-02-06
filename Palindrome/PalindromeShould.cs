@@ -7,4 +7,10 @@ public partial class PalindromeShould
     {
         Assert.True(Palindrome.Calculate("Anna"));
     }
+    
+    [Fact]
+    public void ReturnTrueWhenInputIsWalter()
+    {
+        Assert.False(Palindrome.Calculate("Walter"));
+    }
 }
