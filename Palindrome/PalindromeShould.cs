@@ -11,7 +11,7 @@ public partial class PalindromeShould
     }
     
     [Fact]
-    public void ReturnTrueWhenInputIsWalter()
+    public void ReturnFalseWhenInputIsWalter()
     {
         Assert.False(Palindrome.Calculate("Walter"));
     }
