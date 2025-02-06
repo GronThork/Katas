@@ -2,10 +2,12 @@ namespace Palindrome;
 
 public partial class PalindromeShould
 {
-    [Fact]
-    public void ReturnTrueWhenInputIsAnna()
+    [Theory]
+    [InlineData("Anna")]
+    [InlineData("12321")]
+    public void ReturnTrueWhenIsPalindrome(string word)
     {
-        Assert.True(Palindrome.Calculate("Anna"));
+        Assert.True(Palindrome.Calculate(word));
     }
     
     [Fact]
