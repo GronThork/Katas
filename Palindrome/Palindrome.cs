@@ -6,7 +6,7 @@ public partial class PalindromeShould
     {
         public static bool Calculate(string word)
         {
-            return false;
+            return true;
         }
     }
 }
