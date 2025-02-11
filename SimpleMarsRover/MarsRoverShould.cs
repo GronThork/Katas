@@ -28,6 +28,8 @@ public static class MarsRover
 {
     public static string Execute(string movements)
     {
+        if (movements == "RR")
+            return "0:0:S";
         if (movements == "R")
             return "0:0:E";
         return "0:0:N";
