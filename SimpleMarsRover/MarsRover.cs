@@ -8,13 +8,20 @@ public class MarsRover
     {
         rover = new Rover();
     }
+
     public string Execute(string movements)
     {
         foreach (var movement in movements.ToCharArray())
+        {
             if (movement == 'R')
             {
                 rover.RotateRight();
             }
+            else if (movement == 'L')
+            {
+                rover.RotateLeft();
+            }
+        }
         
         return rover.GetPosition();
     }

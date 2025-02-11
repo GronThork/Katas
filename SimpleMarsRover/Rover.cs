@@ -20,4 +20,16 @@ public class Rover
     {
         return "0:0:" + Orientation;
     }
+
+    public void RotateLeft()
+    {
+        Orientation = Orientation switch
+        {
+            CardinalPoint.N => CardinalPoint.W,
+            CardinalPoint.W => CardinalPoint.S,
+            CardinalPoint.S => CardinalPoint.E,
+            CardinalPoint.E => CardinalPoint.N,
+            _ => Orientation
+        };
+    }
 }
