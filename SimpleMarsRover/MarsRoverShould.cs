@@ -6,7 +6,9 @@ public class MarsRoverShould
     public void BeAtTheInitialPositionWithoutHavingExecutedAnyMovement()
     {
         const string movements = "";
-        Assert.Equal("0:0:N", MarsRover.Execute(movements));
+        var marsRover = new MarsRover();
+        
+        Assert.Equal("0:0:N", marsRover.Execute(movements));
     }
     
     [Theory]
@@ -14,35 +16,8 @@ public class MarsRoverShould
     [InlineData("RR", "0:0:S")]
     public void RotateToRightDirection(string movements, string expectedPosition)
     {
-        Assert.Equal(expectedPosition, MarsRover.Execute(movements));
-    }
-}
-
-public static class MarsRover
-{
-    public static string Execute(string movements)
-    {
-        var orientation = "N";
-        foreach (var movement in movements.ToCharArray())
-            if (movement == 'R')
-            {
-                orientation = RotateRight(orientation);
-            }
+        var marsRover = new MarsRover();
         
-        return "0:0:" + orientation;
-    }
-
-    private static string RotateRight(string orientation)
-    {
-        if (orientation == "N")
-        {
-            orientation = "E";
-        }
-        else if (orientation == "E")
-        {
-            orientation = "S";
-        }
-
-        return orientation;
+        Assert.Equal(expectedPosition, marsRover.Execute(movements));
     }
 }
