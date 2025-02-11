@@ -2,16 +2,16 @@ namespace SimpleMarsRover;
 
 public class Rover
 {
-    private string Orientation { get; set; } = "N";
+    private CardinalPoint Orientation { get; set; } = CardinalPoint.N;
 
     public void RotateRight()
     {
         Orientation = Orientation switch
         {
-            "N" => "E",
-            "E" => "S",
-            "S" => "W",
-            "W" => "N",
+            CardinalPoint.N => CardinalPoint.E,
+            CardinalPoint.E => CardinalPoint.S,
+            CardinalPoint.S => CardinalPoint.W,
+            CardinalPoint.W => CardinalPoint.N,
             _ => Orientation
         };
     }
