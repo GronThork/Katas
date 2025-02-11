@@ -15,6 +15,7 @@ public class MarsRoverShould
     [InlineData("R", "0:0:E")]
     [InlineData("RR", "0:0:S")]
     [InlineData("RRR", "0:0:W")]
+    [InlineData("RRRR", "0:0:N")]
     public void RotateToRightDirection(string movements, string expectedPosition)
     {
         var marsRover = new MarsRover();
