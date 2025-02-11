@@ -10,6 +10,7 @@ public class Rover
         {
             "N" => "E",
             "E" => "S",
+            "S" => "W",
             _ => Orientation
         };
     }
