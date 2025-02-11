@@ -21,6 +21,10 @@ public class MarsRover
             {
                 rover.RotateLeft();
             }
+            else if (movement == 'M')
+            {
+                rover.MoveForward();
+            }
         }
         
         return rover.GetPosition();

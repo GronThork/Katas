@@ -2,7 +2,9 @@ namespace SimpleMarsRover;
 
 public class Rover
 {
+    private int CoordinateX { get; set; } = 0;
     private CardinalPoint Orientation { get; set; } = CardinalPoint.N;
+
 
     public void RotateRight()
     {
@@ -18,7 +20,7 @@ public class Rover
 
     public string GetPosition()
     {
-        return "0:0:" + Orientation;
+        return CoordinateX + ":0:" + Orientation;
     }
 
     public void RotateLeft()
@@ -31,5 +33,10 @@ public class Rover
             CardinalPoint.E => CardinalPoint.N,
             _ => Orientation
         };
+    }
+
+    public void MoveForward()
+    {
+        CoordinateX = 1;
     }
 }
