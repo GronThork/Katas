@@ -22,10 +22,27 @@ public static class MarsRover
 {
     public static string Execute(string movements)
     {
-        if (movements == "RR")
-            return "0:0:S";
-        if (movements == "R")
-            return "0:0:E";
-        return "0:0:N";
+        var orientation = "N";
+        foreach (var movement in movements.ToCharArray())
+            if (movement == 'R')
+            {
+                orientation = RotateRight(orientation);
+            }
+        
+        return "0:0:" + orientation;
+    }
+
+    private static string RotateRight(string orientation)
+    {
+        if (orientation == "N")
+        {
+            orientation = "E";
+        }
+        else if (orientation == "E")
+        {
+            orientation = "S";
+        }
+
+        return orientation;
     }
 }
