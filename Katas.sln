@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagram", "Anagram\Anagram.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "Palindrome\Palindrome.csproj", "{13B118A3-08C2-4200-9B49-BAFAF8650747}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMarsRover", "SimpleMarsRover\SimpleMarsRover.csproj", "{475CB857-1622-480F-8479-34E47FF0303B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{13B118A3-08C2-4200-9B49-BAFAF8650747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13B118A3-08C2-4200-9B49-BAFAF8650747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13B118A3-08C2-4200-9B49-BAFAF8650747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475CB857-1622-480F-8479-34E47FF0303B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475CB857-1622-480F-8479-34E47FF0303B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475CB857-1622-480F-8479-34E47FF0303B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475CB857-1622-480F-8479-34E47FF0303B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
