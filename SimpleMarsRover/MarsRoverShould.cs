@@ -22,4 +22,18 @@ public class MarsRoverShould
         
         Assert.Equal(expectedPosition, marsRover.Execute(movements));
     }
+    
+    [Theory]
+    [InlineData("L", "0:0:W")]
+    [InlineData("LL", "0:0:S")]
+    [InlineData("LLL", "0:0:E")]
+    [InlineData("LLLL", "0:0:N")]
+    public void RotateToLeftDirection(string movements, string expectedPosition)
+    {
+        var marsRover = new MarsRover();
+        
+        Assert.Equal(expectedPosition, marsRover.Execute(movements));
+    }
+    
+    
 }
