@@ -34,6 +34,12 @@ public class MarsRoverShould
         
         Assert.Equal(expectedPosition, marsRover.Execute(movements));
     }
-    
+
+    [Fact]
+    public void MoveForward()
+    {
+        var marsRover = new MarsRover();
+        Assert.Equal("1:0:N", marsRover.Execute("M"));
+    }
     
 }
