@@ -15,6 +15,13 @@ public class MarsRoverShould
         const string movements = "R";
         Assert.Equal("0:0:E", MarsRover.Execute(movements));
     }
+    
+    [Fact]
+    public void RotateToSouthFromInitialPosition()
+    {
+        const string movements = "RR";
+        Assert.Equal("0:0:S", MarsRover.Execute(movements));
+    }
 }
 
 public static class MarsRover
