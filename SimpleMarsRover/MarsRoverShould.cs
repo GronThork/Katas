@@ -9,18 +9,12 @@ public class MarsRoverShould
         Assert.Equal("0:0:N", MarsRover.Execute(movements));
     }
     
-    [Fact]
-    public void RotateToEastFromInitialPosition()
+    [Theory]
+    [InlineData("R", "0:0:E")]
+    [InlineData("RR", "0:0:S")]
+    public void RotateToRightDirection(string movements, string expectedPosition)
     {
-        const string movements = "R";
-        Assert.Equal("0:0:E", MarsRover.Execute(movements));
-    }
-    
-    [Fact]
-    public void RotateToSouthFromInitialPosition()
-    {
-        const string movements = "RR";
-        Assert.Equal("0:0:S", MarsRover.Execute(movements));
+        Assert.Equal(expectedPosition, MarsRover.Execute(movements));
     }
 }
 
