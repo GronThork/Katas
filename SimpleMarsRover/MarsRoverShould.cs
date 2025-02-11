@@ -8,12 +8,19 @@ public class MarsRoverShould
         const string movements = "";
         Assert.Equal("0:0:N", MarsRover.Execute(movements));
     }
+    
+    [Fact]
+    public void RotateToEastFromInitialPosition()
+    {
+        const string movements = "R";
+        Assert.Equal("0:0:E", MarsRover.Execute(movements));
+    }
 }
 
 public static class MarsRover
 {
     public static string Execute(string movements)
     {
-        return string.Empty;
+        return "0:0:N";
     }
 }
