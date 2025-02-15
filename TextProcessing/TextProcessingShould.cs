@@ -22,6 +22,18 @@ public class TextProcessingShould
 
         Assert.Equal(expected, TextProcessing.CountRepeatedWords("Hello World"));
     }
+    
+    [Fact]
+    public void CountTheNumberOfRepeteadWordsWithoutCaseAndCommasAndPoints()
+    {
+        var expected = new Dictionary<string, int>
+        {
+            { "hello", 2 },
+            { "world", 1 }
+        };
+
+        Assert.Equal(expected, TextProcessing.CountRepeatedWords("Hello, World, hello."));
+    }
 }
 
 public static class TextProcessing
