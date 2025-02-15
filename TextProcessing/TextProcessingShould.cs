@@ -20,7 +20,7 @@ public class TextProcessingShould
             { "World", 1 }
         };
 
-        Assert.Equal(expected, TextProcessing.CountRepeatedWords());
+        Assert.Equal(expected, TextProcessing.CountRepeatedWords("Hello World"));
     }
 }
 
@@ -31,8 +31,15 @@ public static class TextProcessing
         return text.Split(" ").Length;
     }
 
-    public static IEnumerable<KeyValuePair<string, int>> CountRepeatedWords()
+    public static IEnumerable<KeyValuePair<string, int>> CountRepeatedWords(string text)
     {
-        return [];
+        var words = text.Split(" ");
+        var wordsCount = new Dictionary<string, int>();
+        
+        foreach (var word in words)
+            if (!wordsCount.TryAdd(word, 1))
+                wordsCount[word]++;
+
+        return wordsCount;
     }
 }
