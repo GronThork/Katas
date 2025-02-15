@@ -2,16 +2,18 @@ namespace TextProcessing;
 
 public class TextProcessingShould
 {
-    [Fact]
-    public void CountTheNumberOfWords()
+    [Theory]
+    [InlineData("Hello World", 2)]
+    [InlineData("Hello im a human", 4)]
+    public void CountTheNumberOfWords(string text, int expected)
     {
-        Assert.Equal(2, TextProcessing.Process("Hello World"));
+        Assert.Equal(expected, TextProcessing.CountWords(text));
     }
 }
 
 public static class TextProcessing
 {
-    public static int Process(string text)
+    public static int CountWords(string text)
     {
         return 2;
     }
