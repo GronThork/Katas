@@ -16,8 +16,8 @@ public class TextProcessingShould
     {
         var expected = new Dictionary<string, int>
         {
-            { "Hello", 1 },
-            { "World", 1 }
+            { "hello", 1 },
+            { "world", 1 }
         };
 
         Assert.Equal(expected, TextProcessing.CountRepeatedWords("Hello World"));
@@ -45,7 +45,8 @@ public static class TextProcessing
 
     public static IEnumerable<KeyValuePair<string, int>> CountRepeatedWords(string text)
     {
-        var words = text.Split(" ");
+        var filteredText = text.ToLower().Replace(",", "").Replace(".", "");
+        var words = filteredText.Split(" ");
         var wordsCount = new Dictionary<string, int>();
         
         foreach (var word in words)
