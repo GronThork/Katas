@@ -14,13 +14,32 @@ public class TextProcessingShould
     [Fact]
     public void CountTheNumberOfRepeteadWords()
     {
+        var text =
+            "Hello, this is an example for you to practice. You should grab this text and make it as your test case.";
         var expected = new Dictionary<string, int>
         {
             { "hello", 1 },
-            { "world", 1 }
+            { "this", 2 },
+            { "is", 1 },
+            { "an", 1 },
+            { "example", 1 },
+            { "for", 1 },
+            { "you", 2 },
+            { "to", 1 },
+            { "practice", 1 },
+            { "should", 1 },
+            { "grab", 1 },
+            { "text", 1 },
+            { "and", 1 },
+            { "make", 1 },
+            { "it", 1 },
+            { "as", 1 },
+            { "your", 1 },
+            { "test", 1 },
+            { "case", 1 }
         };
 
-        Assert.Equal(expected, TextProcessing.CountRepeatedWords("Hello World"));
+        Assert.Equal(expected, TextProcessing.CountRepeatedWords(text));
     }
     
     [Fact]
