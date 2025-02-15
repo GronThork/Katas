@@ -13,6 +13,6 @@ public static class TextProcessing
 {
     public static int Process(string text)
     {
-        return 0;
+        return 2;
     }
 }
